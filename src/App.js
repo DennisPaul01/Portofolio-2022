@@ -1,22 +1,12 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import { Box, Container } from "@chakra-ui/react";
+import NavBar from "./components/NavBar/NavBar";
+import HomePage from "./Pages/HomePage";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Portofoliu Website Denis</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxW="1600px">
+      <NavBar></NavBar>
+      <HomePage></HomePage>
+    </Container>
   );
 }
 
