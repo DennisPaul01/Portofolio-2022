@@ -1,46 +1,37 @@
-import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
+import { Box, Image, Text, Flex, Button, Divider } from "@chakra-ui/react";
+import BannerToday from "../../assets/today/image-banner-today.png";
 import { useState } from "react";
-import artorian1 from "../../assets/artorian/artorian-1.png";
-import artorian2 from "../../assets/artorian/artorian-2.png";
-import artorianColors from "../../assets/artorian/artorian-colors.png";
-import artorianLogo from "../../assets/artorian/artorian-logo.png";
+
 import reactIcon1 from "../../assets/artorian/React-icon-1.svg";
-import reactIcon2 from "../../assets/artorian/React-icon-2.svg";
-import cssIcon from "../../assets/artorian/icons8-css3-1.svg";
+import reduxIcon from "../../assets/today/redux 1.svg";
+import chakraUiIcon from "../../assets/today/logomark-colored 1.svg";
 import reactRouterIcon from "../../assets/artorian/react-router-seeklogo.com-1.svg";
 import firebase from "../../assets/artorian/firebase-seeklogo.com-1.svg";
-import gitIcon from "../../assets/artorian/git-artorian.svg";
+import gitIcon from "../../assets/today/iconmonstr-github-1 1.svg";
 
-const ArtorianProject = () => {
+const TodayProject = () => {
   const [showModal, setShowModal] = useState(false);
 
   const showModalHandler = () => {
     setShowModal(!showModal);
   };
-
+  const redirectWebsite = () => {
+    const url = "https://today-todo-app.netlify.app/";
+    window.open(url, "_blank");
+  };
   return (
     <Box position={["relative"]}>
       <Box
+        onClick={redirectWebsite}
         onMouseEnter={showModalHandler}
         maxW={["100%"]}
-        bg="#333128"
+        maxHeight={["auto"]}
+        bg="#4285F4"
         display="flex"
-        justifyContent={["space-around"]}
-        flexDirection={["column-reverse", "column-reverse", "row"]}
-        alignItems={["center", "center", "flex-end"]}
+        alignItems={["center"]}
+        justifyContent={["center"]}
       >
-        <Box>
-          <Image maxW={["100%"]} src={artorian1} mt="20px"></Image>
-        </Box>
-        <Box>
-          <Image
-            src={artorianLogo}
-            maxW={["100%"]}
-            mt="20px"
-            ml={["5px", "20px", "0"]}
-          ></Image>
-          <Image maxW={["100%"]} src={artorian2} mt="20px"></Image>
-        </Box>
+        <Image src={BannerToday} maxW={["100%"]} px="40px" my="40px"></Image>
       </Box>
       {showModal && (
         <Box
@@ -50,20 +41,28 @@ const ArtorianProject = () => {
           w="100%"
           height="100%"
           onMouseLeave={showModalHandler}
-          display="flex"
+          display={["none", "none", "none", "flex"]}
           flexDirection={["column", "column", "row"]}
           alignItems={["center", "center"]}
           justifyContent={["space-around"]}
-          bg="rgba(0, 0, 0, 0.8);"
+          bg="#21437A"
           color="white"
-          px="10px"
+          px="50px"
         >
           <Box>
-            <Text fontSize={["h4"]} fontFamily={["h4"]} mb="20px">
-              Artorian Gallery is a personal <br></br> project where I built an
-              art store.
+            <Text fontSize={["p"]} fontFamily={["body"]} mb="20px">
+              To do list apps are everywhere, but my biggest issue with them all
+              is how bloated they all are. Social login, user tracking, email
+              notifications. The list goes on. I wanted something really simple
+              to get the job done, so I built it. <br></br> <br></br>
+              Aside from updating your account details, all you can do is create
+              tasks or lists. Simple as that. There is included a section with
+              quotes for programs and from kanye's tweets.
             </Text>
-            <Text mb="20px">Technologies I used for this project:</Text>
+            <Divider />
+            <Text mb="20px" mt="20px">
+              Technologies I used for this project:
+            </Text>
             <Flex alignItems={["center"]} mb={["10px"]}>
               <Box w={["30px"]}>
                 <Image src={reactIcon1}></Image>
@@ -74,10 +73,10 @@ const ArtorianProject = () => {
             </Flex>
             <Flex alignItems={["center"]} mb={["10px"]}>
               <Box w={["30px"]}>
-                <Image src={cssIcon}></Image>
+                <Image src={chakraUiIcon}></Image>
               </Box>
               <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
-                CSS
+                Chakra UI - for styling the components
               </Text>
             </Flex>
             <Flex alignItems={["center"]} mb={["10px"]}>
@@ -90,10 +89,10 @@ const ArtorianProject = () => {
             </Flex>
             <Flex alignItems={["center"]} mb={["10px"]}>
               <Box w={["30px"]}>
-                <Image src={reactIcon2}></Image>
+                <Image src={reduxIcon}></Image>
               </Box>
               <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
-                React Context API - for global state management
+                Redux - for state management
               </Text>
             </Flex>
             <Flex alignItems={["center"]} mb={["10px"]}>
@@ -107,17 +106,17 @@ const ArtorianProject = () => {
             <Flex display={["flex"]} mt={["20px"]} alignItems={["center"]}>
               <Text
                 fontFamily={["heading"]}
-                border={["1px solid red"]}
+                border={["1px solid yellow"]}
                 px={["50px"]}
                 py={["10px"]}
                 fontSize={["p"]}
-                color={["red"]}
-                _hover={{ backgroundColor: "red", color: "white" }}
+                color={["yellow"]}
+                _hover={{ backgroundColor: "yellow", color: "white" }}
               >
                 <a
                   target="_blank"
                   rel="noreferrer"
-                  href="https://artorian-gallery-store.netlify.app/"
+                  href="https://today-todo-app.netlify.app/"
                 >
                   Check website
                 </a>
@@ -129,17 +128,11 @@ const ArtorianProject = () => {
                 as="a"
                 _hover={{ backgroundColor: "none", outline: "none" }}
                 _active={{ bacgkoundColor: "none" }}
-                href="https://github.com/DennisPaul01/Artorian-Gallery-Store"
+                href="https://github.com/DennisPaul01/Today-Todo-App"
               >
                 <Image src={gitIcon}></Image>
               </Button>
             </Flex>
-          </Box>
-          <Box display={["none", "block", "block"]}>
-            <Image
-              src={artorianColors}
-              width={["70%", "70%", "80%", "100%"]}
-            ></Image>
           </Box>
         </Box>
       )}
@@ -147,4 +140,4 @@ const ArtorianProject = () => {
   );
 };
 
-export default ArtorianProject;
+export default TodayProject;

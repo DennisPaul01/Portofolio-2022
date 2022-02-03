@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import classes from "./MovingText.module.css";
 
 const MovingText = () => {
