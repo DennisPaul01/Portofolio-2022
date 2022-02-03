@@ -8,6 +8,7 @@ import {
   IconButton,
   Image,
   Text,
+  Container,
 } from "@chakra-ui/react";
 
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
@@ -18,7 +19,7 @@ const NavBar = () => {
   const [showMenu, setShowMenu] = useState(true);
 
   return (
-    <>
+    <Container maxW="1600px">
       <Box
         display={"flex"}
         justifyContent={"space-between"}
@@ -126,7 +127,7 @@ const NavBar = () => {
           </Box>
         </Box>
       )}
-    </>
+    </Container>
   );
 };
 
