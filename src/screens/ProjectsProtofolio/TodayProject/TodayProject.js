@@ -1,13 +1,13 @@
 import { Box, Image, Text, Flex, Button, Divider } from "@chakra-ui/react";
-import BannerToday from "../../assets/today/image-banner-today.png";
+import BannerToday from "../../../assets/today/image-banner-today.png";
 import { useState } from "react";
 
-import reactIcon1 from "../../assets/artorian/React-icon-1.svg";
-import reduxIcon from "../../assets/today/redux 1.svg";
-import chakraUiIcon from "../../assets/today/logomark-colored 1.svg";
-import reactRouterIcon from "../../assets/artorian/react-router-seeklogo.com-1.svg";
-import firebase from "../../assets/artorian/firebase-seeklogo.com-1.svg";
-import gitIcon from "../../assets/today/iconmonstr-github-1 1.svg";
+import reactIcon1 from "../../../assets/artorian/React-icon-1.svg";
+import reduxIcon from "../../../assets/today/redux 1.svg";
+import chakraUiIcon from "../../../assets/today/logomark-colored 1.svg";
+import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-1.svg";
+import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
+import gitIcon from "../../../assets/today/iconmonstr-github-1 1.svg";
 
 const TodayProject = () => {
   const [showModal, setShowModal] = useState(false);

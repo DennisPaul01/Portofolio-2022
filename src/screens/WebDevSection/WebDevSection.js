@@ -1,11 +1,12 @@
 import { Text, Container, Grid, GridItem, Box } from "@chakra-ui/react";
-import ArtorianProject from "../ArtorianProject/ArtorianProject";
-import TodayProject from "../TodayProject/TodayProject";
+import ArtorianProject from "../ProjectsProtofolio/ArtorianProject/ArtorianProject";
+import TodayProject from "../ProjectsProtofolio/TodayProject/TodayProject";
 
 const WebDevSection = () => {
   return (
     <Container
       maxW="1600px"
+      height={["auto"]}
       mt={["50px", "100px", "200px"]}
       mb={["50px", "100px", "200px"]}
     >

@@ -1,15 +1,15 @@
 import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
 import { useState } from "react";
-import artorian1 from "../../assets/artorian/artorian-1.png";
-import artorian2 from "../../assets/artorian/artorian-2.png";
-import artorianColors from "../../assets/artorian/artorian-colors.png";
-import artorianLogo from "../../assets/artorian/artorian-logo.png";
-import reactIcon1 from "../../assets/artorian/React-icon-1.svg";
-import reactIcon2 from "../../assets/artorian/React-icon-2.svg";
-import cssIcon from "../../assets/artorian/icons8-css3-1.svg";
-import reactRouterIcon from "../../assets/artorian/react-router-seeklogo.com-1.svg";
-import firebase from "../../assets/artorian/firebase-seeklogo.com-1.svg";
-import gitIcon from "../../assets/artorian/git-artorian.svg";
+import artorian1 from "../../../assets/artorian/artorian-1.png";
+import artorian2 from "../../../assets/artorian/artorian-2.png";
+import artorianColors from "../../../assets/artorian/artorian-colors.png";
+import artorianLogo from "../../../assets/artorian/artorian-logo.png";
+import reactIcon1 from "../../../assets/artorian/React-icon-1.svg";
+import reactIcon2 from "../../../assets/artorian/React-icon-2.svg";
+import cssIcon from "../../../assets/artorian/icons8-css3-1.svg";
+import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-1.svg";
+import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
+import gitIcon from "../../../assets/artorian/git-artorian.svg";
 
 const ArtorianProject = () => {
   const [showModal, setShowModal] = useState(false);
