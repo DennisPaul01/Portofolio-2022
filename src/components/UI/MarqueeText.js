@@ -18,7 +18,7 @@ const MarqueeText = (props) => {
       " CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / CONTACT / ";
   }
   return (
-    <Text className={classes.marquee}>
+    <Text className={classes.marquee} color="blacklight">
       <span>{textBar}</span>
     </Text>
   );

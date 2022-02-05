@@ -71,7 +71,7 @@ const WebDesignSection = () => {
               mx={"27px"}
               width={["467px"]}
             >
-              {changeText ? "See more work " : `Under Construction`}
+              {!changeText ? "See more work " : `Under Construction`}
             </Text>
           </Box>
         </GridItem>
