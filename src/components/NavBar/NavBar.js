@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Scroll from "react-scroll";
+import { useHistory } from "react-router-dom";
 
 import {
   Box,
@@ -17,7 +20,11 @@ import logo from "../../assets/logo.svg";
 
 const NavBar = () => {
   const [showMenu, setShowMenu] = useState(true);
-
+  let Links = Scroll.Link;
+  const history = useHistory();
+  const redirectHandler = () => {
+    history.push("/");
+  };
   return (
     <Container maxW="1600px">
       <Box
@@ -27,7 +34,9 @@ const NavBar = () => {
         mt={["1rem", "1rem", "5rem"]}
       >
         <Box>
-          <Image src={logo} alt="Dennis Paul" w={"100%"} />
+          <Link to="/">
+            <Image src={logo} alt="Dennis Paul" w={"100%"} />
+          </Link>
         </Box>
         <Box>
           <Breadcrumb
@@ -38,16 +47,38 @@ const NavBar = () => {
             display={["none", "block"]}
           >
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">Work</BreadcrumbLink>
+              <Links
+                onClick={redirectHandler}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={50}
+                duration={500}
+                to="work"
+                style={{ cursor: "pointer" }}
+              >
+                Work
+              </Links>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">Articles</BreadcrumbLink>
+              <Link to="/Articles">Articles</Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">About me</BreadcrumbLink>
+              <Link to="/about">About me</Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <BreadcrumbLink href="#">Contact</BreadcrumbLink>
+              <Links
+                onClick={redirectHandler}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={50}
+                duration={500}
+                to="contact"
+                style={{ cursor: "pointer" }}
+              >
+                Contact
+              </Links>
             </BreadcrumbItem>
           </Breadcrumb>
           <Box display={["block", "none"]}>
@@ -90,7 +121,18 @@ const NavBar = () => {
               fontWeight="400"
               fontFamily={"heading"}
             >
-              Work
+              <Links
+                onClick={redirectHandler}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={50}
+                duration={500}
+                to="work"
+                style={{ cursor: "pointer" }}
+              >
+                Work
+              </Links>
             </Text>
           </Box>
           <Box as="button" display="flex" mt="20px" display={["block", "none"]}>
@@ -111,7 +153,7 @@ const NavBar = () => {
               fontWeight="400"
               fontFamily={"heading"}
             >
-              About me
+              <Link to="/about">About me</Link>
             </Text>
           </Box>
 
@@ -122,7 +164,18 @@ const NavBar = () => {
               fontWeight="400"
               fontFamily={"heading"}
             >
-              Contact
+              <Links
+                onClick={redirectHandler}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                offset={50}
+                duration={500}
+                to="contact"
+                style={{ cursor: "pointer" }}
+              >
+                Contact
+              </Links>
             </Text>
           </Box>
         </Box>

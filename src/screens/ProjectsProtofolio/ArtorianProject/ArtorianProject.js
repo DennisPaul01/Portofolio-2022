@@ -1,4 +1,4 @@
-import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
+import { Box, Image, Text, Flex, Button, Link } from "@chakra-ui/react";
 import { useState } from "react";
 import artorian1 from "../../../assets/artorian/artorian-1.png";
 import artorian2 from "../../../assets/artorian/artorian-2.png";
@@ -105,22 +105,20 @@ const ArtorianProject = () => {
               </Text>
             </Flex>
             <Flex display={["flex"]} mt={["20px"]} alignItems={["center"]}>
-              <Text
-                fontFamily={["heading"]}
-                border={["1px solid red"]}
-                px={["50px"]}
-                py={["10px"]}
-                fontSize={["p"]}
-                color={["red"]}
-                _hover={{ backgroundColor: "red", color: "white" }}
-              >
-                <a
+              <Text fontFamily={["heading"]}>
+                <Link
+                  border={["1px solid red"]}
+                  px={["50px"]}
+                  py={["10px"]}
+                  fontSize={["p"]}
+                  color={["red"]}
+                  _hover={{ backgroundColor: "red", color: "white" }}
                   target="_blank"
                   rel="noreferrer"
                   href="https://artorian-gallery-store.netlify.app/"
                 >
                   Check website
-                </a>
+                </Link>
               </Text>
               <Button
                 ml={["20px"]}

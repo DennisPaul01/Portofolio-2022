@@ -1,4 +1,12 @@
-import { Box, Image, Text, Flex, Button, Divider } from "@chakra-ui/react";
+import {
+  Box,
+  Image,
+  Text,
+  Flex,
+  Button,
+  Divider,
+  Link,
+} from "@chakra-ui/react";
 import BannerToday from "../../../assets/today/image-banner-today.png";
 import { useState } from "react";
 
@@ -104,22 +112,20 @@ const TodayProject = () => {
               </Text>
             </Flex>
             <Flex display={["flex"]} mt={["20px"]} alignItems={["center"]}>
-              <Text
-                fontFamily={["heading"]}
-                border={["1px solid yellow"]}
-                px={["50px"]}
-                py={["10px"]}
-                fontSize={["p"]}
-                color={["yellow"]}
-                _hover={{ backgroundColor: "yellow", color: "white" }}
-              >
-                <a
+              <Text fontFamily={["heading"]}>
+                <Link
+                  border={["1px solid yellow"]}
+                  px={["50px"]}
+                  py={["10px"]}
+                  fontSize={["p"]}
+                  color={["yellow"]}
+                  _hover={{ backgroundColor: "yellow", color: "white" }}
                   target="_blank"
                   rel="noreferrer"
                   href="https://today-todo-app.netlify.app/"
                 >
                   Check website
-                </a>
+                </Link>
               </Text>
               <Button
                 ml={["20px"]}

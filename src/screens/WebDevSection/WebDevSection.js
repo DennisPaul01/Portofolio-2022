@@ -1,6 +1,7 @@
 import { Text, Container, Grid, GridItem, Box } from "@chakra-ui/react";
 import ArtorianProject from "../ProjectsProtofolio/ArtorianProject/ArtorianProject";
 import TodayProject from "../ProjectsProtofolio/TodayProject/TodayProject";
+import { Element } from "react-scroll";
 
 const WebDevSection = () => {
   return (
@@ -17,6 +18,7 @@ const WebDevSection = () => {
       >
         Web development work
       </Text>
+      <Element name="work" id="work"></Element>
       <Grid
         margin={["auto"]}
         maxW={["1400px"]}

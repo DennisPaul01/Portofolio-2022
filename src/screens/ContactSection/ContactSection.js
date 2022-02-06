@@ -11,6 +11,7 @@ import CV from "../../assets/about_me/darth-vader-icon.png";
 import gitHub from "../../assets/iconmonstr-github-1 1.svg";
 import linkedin from "../../assets/iconmonstr-linkedin-3 1.svg";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import { Element } from "react-scroll";
 
 const ContactSection = () => {
   return (
@@ -21,6 +22,7 @@ const ContactSection = () => {
       maxW="100%"
       centerContent
     >
+      <Element name="contact" id="contact"></Element>
       <Flex
         alignItems={["center"]}
         flexWrap="wrap"
