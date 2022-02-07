@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Scroll from "react-scroll";
 import { useHistory } from "react-router-dom";
+import { useToast } from "@chakra-ui/react";
+import workerman from "../../assets/workerman.png";
 
 import {
   Box,
@@ -25,6 +27,26 @@ const NavBar = () => {
   const redirectHandler = () => {
     history.push("/");
   };
+  const toast = useToast();
+
+  const BoxError = (
+    <Box
+      color="black"
+      bg="white"
+      border={["1px solid green"]}
+      display={["flex"]}
+      alignItems={["center"]}
+      justifyContent={["center"]}
+      py="10px"
+      borderRadius={["7px"]}
+    >
+      <Box>
+        <Image src={workerman} width="30px"></Image>
+      </Box>
+      <Text fontSize={["p"]}> Under Construction</Text>
+    </Box>
+  );
+
   return (
     <Container maxW="1600px">
       <Box
@@ -61,7 +83,19 @@ const NavBar = () => {
               </Links>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <Link to="/Articles">Articles</Link>
+              <Link
+                to="articles"
+                onClick={() =>
+                  toast({
+                    position: "top",
+                    duration: 2000,
+                    isClosable: true,
+                    render: () => BoxError,
+                  })
+                }
+              >
+                Articles
+              </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
               <Link to="/about">About me</Link>
@@ -141,6 +175,14 @@ const NavBar = () => {
               fontSize="p"
               fontWeight="400"
               fontFamily={"heading"}
+              onClick={() =>
+                toast({
+                  position: "top",
+                  duration: 2000,
+                  isClosable: true,
+                  render: () => BoxError,
+                })
+              }
             >
               Articles
             </Text>

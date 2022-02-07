@@ -8,7 +8,7 @@ const PersonalTrainerProject = () => {
     <Box
       maxW={["100%"]}
       height={["auto"]}
-      bg="black"
+      bg="#000"
       display="flex"
       justifyContent={["space-around"]}
       alignItems={["center", "center"]}
