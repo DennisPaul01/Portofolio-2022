@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import {
   FormControl,
@@ -9,75 +9,171 @@ import {
   Textarea,
   Button,
   Box,
+  Text,
+  useToast,
 } from "@chakra-ui/react";
 
 const ContactForm = () => {
-  const [inputName, setInputName] = useState("   ");
+  const toast = useToast();
 
-  const nameInputHandler = (e) => setInputName(e.target.value);
+  const [nameInput, setNameInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [messageInput, setMessageInput] = useState("");
+  const [nameStatus, setNameStatus] = useState(false);
+  const [emailStatus, setEmailStatus] = useState(false);
+  const [messageStatus, setMessageStatus] = useState(false);
+
+  const nameHandler = (event) => {
+    setNameInput(event.target.value);
+  };
+  const emailHandler = (event) => {
+    setEmailInput(event.target.value);
+  };
+  const messageHandler = (event) => {
+    setMessageInput(event.target.value);
+  };
+
+  const messageUserHandler = (e) => {
+    e.preventDefault();
+
+    // I made these to show the messages of errors
+    if (nameInput != null && nameInput.length > 6) {
+      setNameStatus(false);
+    } else {
+      setNameStatus(true);
+    }
+    if (emailInput != null && emailInput.length > 6) {
+      setEmailStatus(false);
+    } else {
+      setEmailStatus(true);
+    }
+    if (messageInput != null && messageInput.length > 6) {
+      setMessageStatus(false);
+    } else {
+      setMessageStatus(true);
+    }
+
+    if (
+      nameInput.length > 6 &&
+      emailInput.length > 6 &&
+      messageInput.length > 6
+    ) {
+      setNameInput(" ");
+      setEmailInput(" ");
+      setMessageInput(" ");
+      console.log("Message Sent");
+    }
+  };
+
+  const BoxMessage = (
+    <Box
+      color="white"
+      bg="green"
+      border={["1px solid green"]}
+      display={["flex"]}
+      alignItems={["center"]}
+      justifyContent={["center"]}
+      py="10px"
+      borderRadius={["7px"]}
+    >
+      <Text fontSize={["p"]}> Your message have been sent.</Text>
+    </Box>
+  );
 
   return (
-    <FormControl
-      w={["300px", "400px", "600px"]}
-      mt={["50px", "50px", "50px", "0"]}
-    >
-      <FormLabel fontFamily={"header"} fontSize="h4" htmlFor="name">
-        Full Name
-      </FormLabel>
-      <Input
-        borderRadius={[0]}
-        fontFamily={["header"]}
-        fontSize="p"
-        id="text"
-        type="text"
-        py="30px"
-      />
-      <FormHelperText color="red" fontFamily={["body"]}>
-        Your name must have more than 3 letters
-      </FormHelperText>
-      <FormLabel fontFamily={"header"} fontSize="h4" htmlFor="email" mt="30px">
-        Email
-      </FormLabel>
-      <Input
-        borderRadius={[0]}
-        fontFamily={["header"]}
-        fontSize="p"
-        id="email"
-        type="email"
-        py="30px"
-        required
-      />
-      <FormHelperText color="red" fontFamily={["body"]}>
-        Your email is empty or dosen't corespond with any email provider.
-      </FormHelperText>
-      <FormLabel fontFamily={"header"} fontSize="h4" htmlFor="name" mt="30px">
-        Message
-      </FormLabel>
-      <Textarea borderRadius={[0]} />
-      <FormHelperText color="red" fontFamily={["body"]}>
-        Your message form is empty.
-      </FormHelperText>
-      <Box display={["flex"]} justifyContent={["flex-end"]} mt="30px">
-        <Button
-          fontFamily={["heading"]}
-          border={["1px solid #F95738"]}
-          px={["100px"]}
-          py={["35px"]}
-          fontSize={["h4"]}
-          color={["red"]}
-          bg={["none"]}
-          _hover={{
-            backgroundColor: "#F95738",
-            outline: "none",
-            color: "white",
-          }}
-          _active={{ bacgkoundColor: "none" }}
-          href="https://github.com/DennisPaul01/Artorian-Gallery-Store"
-        >
-          Send
-        </Button>
-      </Box>
-    </FormControl>
+    <Box w={["300px", "400px", "600px"]} mt={["50px", "50px", "50px", "0"]}>
+      <form onSubmit={messageUserHandler}>
+        <FormControl>
+          <FormLabel fontFamily={"header"} fontSize="h4" htmlFor="fname">
+            Full Name
+          </FormLabel>
+          <Input
+            borderRadius={[0]}
+            fontFamily={["header"]}
+            fontSize="p"
+            id="fname"
+            name="fname"
+            type="text"
+            py="30px"
+            onChange={nameHandler}
+            value={nameInput}
+          />
+          {nameStatus && (
+            <FormHelperText color="red" fontFamily={["body"]}>
+              Your name must have more than 3 charaters
+            </FormHelperText>
+          )}
+        </FormControl>
+        <FormControl>
+          <FormLabel
+            fontFamily={"header"}
+            fontSize="h4"
+            htmlFor="email"
+            mt="30px"
+          >
+            Email
+          </FormLabel>
+          <Input
+            borderRadius={[0]}
+            fontFamily={["header"]}
+            fontSize="p"
+            id="email"
+            type="email"
+            name="email"
+            py="30px"
+            onChange={emailHandler}
+            value={emailInput}
+          />
+          {emailStatus && (
+            <FormHelperText color="red" fontFamily={["body"]}>
+              The email must be at least 6 charaters.
+            </FormHelperText>
+          )}
+        </FormControl>
+        <FormControl>
+          <FormLabel
+            fontFamily={"header"}
+            fontSize="h4"
+            htmlFor="message"
+            mt="30px"
+          >
+            Message
+          </FormLabel>
+          <Textarea
+            borderRadius={[0]}
+            id="message"
+            name="message"
+            onChange={messageHandler}
+            value={messageInput}
+          />
+          {messageStatus && (
+            <FormHelperText color="red" fontFamily={["body"]}>
+              Your message must have at least 10 charaters.
+            </FormHelperText>
+          )}
+        </FormControl>
+        <Box display={["flex"]} justifyContent={["flex-end"]} mt="30px">
+          <Button
+            fontFamily={["heading"]}
+            border={["1px solid #F95738"]}
+            px={["100px"]}
+            py={["35px"]}
+            fontSize={["h4"]}
+            color={["red"]}
+            bg={["none"]}
+            _hover={{
+              backgroundColor: "#F95738",
+              outline: "none",
+              color: "white",
+            }}
+            _active={{ bacgkoundColor: "none" }}
+            type="submit"
+          >
+            Send
+          </Button>
+        </Box>
+      </form>
+    </Box>
   );
 };
 
