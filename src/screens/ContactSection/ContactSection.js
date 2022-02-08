@@ -20,6 +20,8 @@ const ContactSection = () => {
       bg="black"
       color={["white"]}
       maxW="100%"
+      as="section"
+      className="footer"
       centerContent
     >
       <Element name="contact" id="contact"></Element>

@@ -9,7 +9,12 @@ import MovingText from "../../components/MovingText/MovingText";
 
 export const IntroSection = () => {
   return (
-    <Container maxW="1600px" mb={["100px", "200px", "350px"]}>
+    <Container
+      maxW="1600px"
+      mb={["100px", "200px", "350px"]}
+      as="section"
+      className="intro-section"
+    >
       <Box
         display={["flex"]}
         mt={["20px", "70px", "150px"]}

@@ -9,10 +9,15 @@ const HomePage = () => {
   return (
     <Box>
       <IntroSection></IntroSection>
+
       <MarqueeText sectionLocation="webdev"></MarqueeText>
+
       <WebDevSection></WebDevSection>
+
       <MarqueeText sectionLocation="webdesign"></MarqueeText>
+
       <WebDesignSection></WebDesignSection>
+
       <MarqueeText sectionLocation="contact"></MarqueeText>
       <ContactSection></ContactSection>
     </Box>

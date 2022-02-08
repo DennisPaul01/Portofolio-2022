@@ -1,9 +1,8 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import {
   FormControl,
   FormLabel,
-  FormErrorMessage,
   FormHelperText,
   Input,
   Textarea,
@@ -12,6 +11,9 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
+
+import db from "../../data/firebase";
+import { collection, setDoc, doc } from "firebase/firestore";
 
 const ContactForm = () => {
   const toast = useToast();
@@ -22,6 +24,32 @@ const ContactForm = () => {
   const [nameStatus, setNameStatus] = useState(false);
   const [emailStatus, setEmailStatus] = useState(false);
   const [messageStatus, setMessageStatus] = useState(false);
+
+  const sendEmail = async function addTaskDatabase(email, name, message) {
+    const today = new Date();
+    const date =
+      today.getFullYear() +
+      "-" +
+      (today.getMonth() + 1) +
+      "-" +
+      today.getDate();
+    const time =
+      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    const dateTime = date + " " + time;
+
+    const messageUser = {
+      name: name,
+      email: email,
+      message: message,
+      date: dateTime,
+    };
+    try {
+      const colRef = collection(db, "users");
+      await setDoc(doc(colRef), messageUser);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   const nameHandler = (event) => {
     setNameInput(event.target.value);
@@ -37,12 +65,12 @@ const ContactForm = () => {
     e.preventDefault();
 
     // I made these to show the messages of errors
-    if (nameInput != null && nameInput.length > 6) {
+    if (nameInput != null && nameInput.length > 3) {
       setNameStatus(false);
     } else {
       setNameStatus(true);
     }
-    if (emailInput != null && emailInput.length > 6) {
+    if (emailInput != null && emailInput.length > 4) {
       setEmailStatus(false);
     } else {
       setEmailStatus(true);
@@ -54,16 +82,26 @@ const ContactForm = () => {
     }
 
     if (
-      nameInput.length > 6 &&
-      emailInput.length > 6 &&
+      nameInput.length > 3 &&
+      emailInput.length > 4 &&
       messageInput.length > 6
     ) {
+      sendEmail(emailInput, nameInput, messageInput);
       setNameInput(" ");
       setEmailInput(" ");
       setMessageInput(" ");
+      toaster();
       console.log("Message Sent");
     }
   };
+
+  const toaster = () =>
+    toast({
+      position: "top",
+      duration: 2000,
+      isClosable: true,
+      render: () => BoxMessage,
+    });
 
   const BoxMessage = (
     <Box
@@ -100,7 +138,7 @@ const ContactForm = () => {
           />
           {nameStatus && (
             <FormHelperText color="red" fontFamily={["body"]}>
-              Your name must have more than 3 charaters
+              Your name must have more than 3 charaters.
             </FormHelperText>
           )}
         </FormControl>
@@ -126,7 +164,7 @@ const ContactForm = () => {
           />
           {emailStatus && (
             <FormHelperText color="red" fontFamily={["body"]}>
-              The email must be at least 6 charaters.
+              The email must be at least 5 charaters.
             </FormHelperText>
           )}
         </FormControl>

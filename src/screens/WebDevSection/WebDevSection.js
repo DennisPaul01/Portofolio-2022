@@ -10,6 +10,8 @@ const WebDevSection = () => {
       height={["auto"]}
       mt={["50px", "100px", "200px"]}
       mb={["50px", "100px", "200px"]}
+      as="section"
+      className="web-development"
     >
       <Text
         fontFamily="heading"

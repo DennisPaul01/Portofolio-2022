@@ -14,6 +14,8 @@ const WebDesignSection = () => {
       maxW="1600px"
       mt={["50px", "100px", "200px"]}
       mb={["50px", "100px", "200px"]}
+      as="section"
+      className="web-deisgn"
     >
       <Text
         fontFamily="heading"

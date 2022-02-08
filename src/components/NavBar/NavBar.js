@@ -48,7 +48,7 @@ const NavBar = () => {
   );
 
   return (
-    <Container maxW="1600px">
+    <Container maxW="1600px" as="nav" className="navbar">
       <Box
         display={"flex"}
         justifyContent={"space-between"}
