@@ -16,10 +16,16 @@ import chakraUiIcon from "../../../assets/today/logomark-colored 1.svg";
 import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-1.svg";
 import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
 import gitIcon from "../../../assets/today/iconmonstr-github-1 1.svg";
+import ReactGA from "react-ga";
 
 const TodayProject = () => {
   const [showModal, setShowModal] = useState(false);
-
+  const todoHandler = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "Clicked on the tddo website",
+    });
+  };
   const showModalHandler = () => {
     setShowModal(!showModal);
   };
@@ -128,6 +134,7 @@ const TodayProject = () => {
                 </Link>
               </Text>
               <Button
+                onClick={todoHandler}
                 ml={["20px"]}
                 bg={["none"]}
                 outline={["none"]}

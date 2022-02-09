@@ -7,13 +7,33 @@ import {
   Button,
   Image,
 } from "@chakra-ui/react";
-import CV from "../../assets/about_me/darth-vader-icon.png";
+
 import gitHub from "../../assets/iconmonstr-github-1 1.svg";
 import linkedin from "../../assets/iconmonstr-linkedin-3 1.svg";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import { Element } from "react-scroll";
+import ReactGA from "react-ga";
 
 const ContactSection = () => {
+  const linkedinHandler = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "click the button Linkedin",
+    });
+  };
+  const githubHandler = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "click the button Github",
+    });
+  };
+  const cvHandler = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "click the button cv",
+    });
+  };
+
   return (
     <Container
       height={["auto"]}
@@ -69,13 +89,22 @@ const ContactSection = () => {
             fontFamily={["heading"]}
           >
             You can donwload my cv from
-            <Link href={CV} download ml={["5px"]} color="red">
+            <Link
+              href={
+                "https://drive.google.com/file/d/1Sc5CrI9YPINa8_EPgPJhcrTlfAbmro_s/view?usp=sharing"
+              }
+              target="_blank"
+              ml={["5px"]}
+              color="red"
+              onClick={cvHandler}
+            >
               here.
             </Link>
           </Text>
           <Flex mt="50px">
             <Box>
               <Button
+                onClick={linkedinHandler}
                 px="0"
                 bg={["none"]}
                 outline={["none"]}
@@ -83,20 +112,21 @@ const ContactSection = () => {
                 target="_blank"
                 _hover={{ backgroundColor: "none", outline: "none" }}
                 _active={{ bacgkoundColor: "none" }}
-                href="https://github.com/DennisPaul01/Today-Todo-App"
+                href="https://www.linkedin.com/in/denis-paul-mucioiu-3358aa182/"
               >
                 <Image src={linkedin}></Image>
               </Button>
             </Box>
             <Box>
               <Button
+                onClick={githubHandler}
                 bg={["none"]}
                 outline={["none"]}
                 as="a"
                 target="_blank"
                 _hover={{ backgroundColor: "none", outline: "none" }}
                 _active={{ bacgkoundColor: "none" }}
-                href="https://github.com/DennisPaul01/Today-Todo-App"
+                href="https://github.com/DennisPaul01"
               >
                 <Image src={gitHub}></Image>
               </Button>

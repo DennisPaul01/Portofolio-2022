@@ -10,10 +10,16 @@ import cssIcon from "../../../assets/artorian/icons8-css3-1.svg";
 import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-1.svg";
 import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
 import gitIcon from "../../../assets/artorian/git-artorian.svg";
+import ReactGA from "react-ga";
 
 const ArtorianProject = () => {
   const [showModal, setShowModal] = useState(false);
-
+  const artStoreHandler = () => {
+    ReactGA.event({
+      category: "Button",
+      action: "Clicked on the artstore website",
+    });
+  };
   const showModalHandler = () => {
     setShowModal(!showModal);
   };
@@ -121,6 +127,7 @@ const ArtorianProject = () => {
                 </Link>
               </Text>
               <Button
+                onClick={artStoreHandler}
                 ml={["20px"]}
                 bg={["none"]}
                 outline={["none"]}

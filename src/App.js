@@ -1,8 +1,16 @@
 import NavBar from "./components/NavBar/NavBar";
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
+import ReactGa from "react-ga";
+
 function App() {
+  useEffect(() => {
+    ReactGa.initialize("G-C2ECT1HVSN");
+    // to report page view
+    ReactGa.pageview(window.location.pathname + window.location.search);
+  }, []);
   return (
     <>
       <header>
