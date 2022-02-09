@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Text, Flex, Container, Image, Box } from "@chakra-ui/react";
 import photo from "../assets/about_me/foto_3.png";
 
@@ -11,10 +11,14 @@ import robot from "../assets/about_me/robot-2.png";
 import sega from "../assets/about_me/sega.png";
 import { useIntersection } from "react-use";
 import { gsap } from "gsap";
+import ReactGA from "react-ga4";
 
 const AboutPage = () => {
   const intersectionRefGhost = useRef(null);
   const intersectionRefRobot = useRef(null);
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: "about" });
+  }, []);
 
   const intersectionGhost = useIntersection(intersectionRefGhost, {
     root: null,

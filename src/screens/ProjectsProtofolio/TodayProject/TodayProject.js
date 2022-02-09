@@ -16,7 +16,7 @@ import chakraUiIcon from "../../../assets/today/logomark-colored 1.svg";
 import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-1.svg";
 import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
 import gitIcon from "../../../assets/today/iconmonstr-github-1 1.svg";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const TodayProject = () => {
   const [showModal, setShowModal] = useState(false);

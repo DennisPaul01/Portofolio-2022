@@ -1,13 +1,17 @@
 import NavBar from "./components/NavBar/NavBar";
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
-import ReactGA from "react-ga";
-import useGaTracker from "./helpers/useGaTracker";
-ReactGA.initialize("G-C2ECT1HVSN");
+import ReactGA from "react-ga4";
+
 function App() {
-  useGaTracker();
+  ReactGA.initialize("UA-136464204-2");
+
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: "home" });
+  }, []);
+
   return (
     <>
       <header>

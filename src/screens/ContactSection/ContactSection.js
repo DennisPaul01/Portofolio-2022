@@ -12,7 +12,7 @@ import gitHub from "../../assets/iconmonstr-github-1 1.svg";
 import linkedin from "../../assets/iconmonstr-linkedin-3 1.svg";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import { Element } from "react-scroll";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const ContactSection = () => {
   const linkedinHandler = () => {

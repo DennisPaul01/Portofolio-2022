@@ -10,7 +10,7 @@ import cssIcon from "../../../assets/artorian/icons8-css3-1.svg";
 import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-1.svg";
 import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
 import gitIcon from "../../../assets/artorian/git-artorian.svg";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 const ArtorianProject = () => {
   const [showModal, setShowModal] = useState(false);
