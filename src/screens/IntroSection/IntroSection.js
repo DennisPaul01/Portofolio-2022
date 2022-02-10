@@ -1,10 +1,13 @@
-import { Box, Text, Container } from "@chakra-ui/react";
+import { Box, Text, Container, Image } from "@chakra-ui/react";
 
 import classes from "./IntroSection.module.css";
 
-import spaceship from "../../assets/spaceship.png";
-import light from "../../assets/light-spaceship-4.png";
-import cow from "../../assets/cow.png";
+import spaceship from "../../assets/spaceship.webp";
+import spaceshippng from "../../assets/spaceship.png";
+import light from "../../assets/light-spaceship-4.webp";
+import lightpng from "../../assets/light-spaceship-4.png";
+import cow from "../../assets/cow.webp";
+import cowpng from "../../assets/cow.png";
 import MovingText from "../../components/MovingText/MovingText";
 
 export const IntroSection = () => {
@@ -32,13 +35,30 @@ export const IntroSection = () => {
           className={classes.container}
           display={["none", "none", "none", "block"]}
         >
-          <img
+          <Image
             src={spaceship}
-            alt="SpaceShip"
+            fallbackSrc={spaceshippng}
             className={classes.spaceship}
-          ></img>
-          <img src={light} alt="SpaceShip" className={classes.light}></img>
-          <img src={cow} alt="SpaceShip" className={classes.cow}></img>
+            alt="An image with a ozn"
+            height="209px"
+            width="403px"
+          />
+          <Image
+            src={light}
+            fallbackSrc={lightpng}
+            className={classes.light}
+            alt="An image with a green light"
+            height="472px"
+            width="343px"
+          />
+          <Image
+            src={cow}
+            fallbackSrc={cowpng}
+            className={classes.cow}
+            alt="An image with a cow"
+            height="267px"
+            width="301px"
+          />
         </Box>
       </Box>
     </Container>

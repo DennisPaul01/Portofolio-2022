@@ -1,15 +1,21 @@
 import { Box, Image, Text, Flex, Button, Link } from "@chakra-ui/react";
 import { useState } from "react";
+
 import artorian1 from "../../../assets/artorian/artorian-1.png";
 import artorian2 from "../../../assets/artorian/artorian-2.png";
 import artorianColors from "../../../assets/artorian/artorian-colors.png";
 import artorianLogo from "../../../assets/artorian/artorian-logo.png";
+import artorian1webp from "../../../assets/artorian/artorian-1.webp";
+import artorian2webp from "../../../assets/artorian/artorian-2.webp";
+import artorianColorswepb from "../../../assets/artorian/artorian-colors.webp";
+
 import reactIcon1 from "../../../assets/artorian/React-icon-1.svg";
 import reactIcon2 from "../../../assets/artorian/React-icon-2.svg";
 import cssIcon from "../../../assets/artorian/icons8-css3-1.svg";
 import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-1.svg";
 import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
 import gitIcon from "../../../assets/artorian/git-artorian.svg";
+
 import ReactGA from "react-ga4";
 
 const ArtorianProject = () => {
@@ -36,7 +42,16 @@ const ArtorianProject = () => {
         alignItems={["center", "center", "flex-end"]}
       >
         <Box>
-          <Image maxW={["100%"]} src={artorian1} mt="20px"></Image>
+          <Image
+            maxW={["100%"]}
+            src={artorian1webp}
+            fallbackSrc={artorian1}
+            width="auto"
+            height="auto"
+            alt=" Artorian Gallery is a personal project where I built an
+            art store."
+            mt="20px"
+          />
         </Box>
         <Box>
           <Image
@@ -45,7 +60,15 @@ const ArtorianProject = () => {
             mt="20px"
             ml={["5px", "20px", "0"]}
           ></Image>
-          <Image maxW={["100%"]} src={artorian2} mt="20px"></Image>
+          <Image
+            maxW={["100%"]}
+            src={artorian2webp}
+            fallbackSrc={artorian2}
+            width="auto"
+            height="auto"
+            alt=" Artorian Gallery - buy page"
+            mt="20px"
+          ></Image>
         </Box>
       </Box>
       {showModal && (
@@ -144,6 +167,10 @@ const ArtorianProject = () => {
             <Image
               src={artorianColors}
               width={["70%", "70%", "80%", "100%"]}
+              src={artorianColorswepb}
+              fallbackSrc={artorianColors}
+              height="auto"
+              alt=" Artorian Gallery - design"
             ></Image>
           </Box>
         </Box>
