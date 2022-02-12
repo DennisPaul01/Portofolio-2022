@@ -1,4 +1,5 @@
-import { Element } from "react-scroll";
+import React from "react";
+
 import ReactGA from "react-ga4";
 
 import {
@@ -44,8 +45,8 @@ const ContactSection = () => {
       as="section"
       className="footer"
       centerContent
+      id="contact"
     >
-      <Element name="contact" id="contact"></Element>
       <Flex
         alignItems={["center"]}
         flexWrap="wrap"
@@ -61,6 +62,7 @@ const ContactSection = () => {
           textAlign={["center", "center", "center", "left"]}
         >
           <Text
+            as="h1"
             color="red"
             fontWeight={["black"]}
             fontSize="h1"
@@ -73,17 +75,24 @@ const ContactSection = () => {
             fontSize={["p", "h4", "h3"]}
             fontFamily={["heading"]}
             mt="50px"
+            as="h4"
           >
             <Link href="mailto:denismucioiu@yahoo.com">
               denismucioiu@yahoo.com
             </Link>
           </Text>
           <Box w="134px" h="8px" bg="white" my="30px"></Box>
-          <Text fontWeight={["regular"]} fontSize="h4" fontFamily={["heading"]}>
+          <Text
+            as="p"
+            fontWeight={["regular"]}
+            fontSize="h4"
+            fontFamily={["heading"]}
+          >
             I love to design and develop new things. <br></br> <br></br>
             Don't know where to start? <br></br> Feel free to ask any question's
           </Text>
           <Text
+            as="h4"
             mt="50px"
             fontWeight={["regular"]}
             fontSize="h4"
@@ -115,7 +124,12 @@ const ContactSection = () => {
                 _active={{ bacgkoundColor: "none" }}
                 href="https://www.linkedin.com/in/denis-paul-mucioiu-3358aa182/"
               >
-                <Image src={linkedin} alt="My linkeding profile"></Image>
+                <Image
+                  src={linkedin}
+                  htmlWidth="40"
+                  htmlHeight="40"
+                  alt="My linkeding profile"
+                ></Image>
               </Button>
             </Box>
             <Box>
@@ -130,7 +144,12 @@ const ContactSection = () => {
                 href="https://github.com/DennisPaul01"
                 alt="My github profile"
               >
-                <Image src={gitHub}></Image>
+                <Image
+                  src={gitHub}
+                  htmlWidth="40"
+                  htmlHeight="40"
+                  alt="My github profile"
+                ></Image>
               </Button>
             </Box>
           </Flex>

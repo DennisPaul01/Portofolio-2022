@@ -21,7 +21,7 @@ const BannersProject = () => {
         gridGap={0}
       >
         <GridItem alignSelf={["center"]}>
-          <Text fontSize={["35px"]} fontFamily={"heading"}>
+          <Text as="h4" fontSize={["35px"]} fontFamily={"heading"}>
             Banners
           </Text>
         </GridItem>

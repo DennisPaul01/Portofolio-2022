@@ -24,7 +24,7 @@ const IntroSection = () => {
         justifyContent="space-between"
       >
         <Box w="800px">
-          <Text fontFamily={["heading"]} fontSize={["h3", "h2"]}>
+          <Text as="h2" fontFamily={["heading"]} fontSize={["h3", "h2"]}>
             Hello, my name is Denis and I create websites for digital universe
             using my skills of
           </Text>

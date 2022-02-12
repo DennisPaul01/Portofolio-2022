@@ -44,11 +44,10 @@ const ArtorianProject = () => {
       >
         <Box>
           <Image
-            maxW={["100%"]}
+            htmlWidth="632"
+            htmlHeight="596"
             src={artorian1webp}
             fallbackSrc={artorian1}
-            width="auto"
-            height="auto"
             alt=" Artorian Gallery is a personal project where I built an
             art store."
             mt="20px"
@@ -58,17 +57,18 @@ const ArtorianProject = () => {
         <Box>
           <Image
             src={artorianLogo}
-            maxW={["100%"]}
+            htmlWidth="507"
+            htmlHeight="55"
             mt="20px"
             ml={["5px", "20px", "0"]}
             loading="lazy"
+            alt="Artorian Logo Website"
           ></Image>
           <Image
-            maxW={["100%"]}
             src={artorian2webp}
             fallbackSrc={artorian2}
-            width="auto"
-            height="auto"
+            htmlWidth="632"
+            htmlHeight="485"
             alt=" Artorian Gallery - buy page"
             mt="20px"
             loading="lazy"
@@ -92,11 +92,13 @@ const ArtorianProject = () => {
           px="10px"
         >
           <Box>
-            <Text fontSize={["h4"]} fontFamily={["h4"]} mb="20px">
+            <Text fontSize={["h4"]} fontFamily={["h4"]} mb="20px" as="h4">
               Artorian Gallery is a personal <br></br> project where I built an
               art store.
             </Text>
-            <Text mb="20px">Technologies I used for this project:</Text>
+            <Text as="h4" mb="20px">
+              Technologies I used for this project:
+            </Text>
             <Flex alignItems={["center"]} mb={["10px"]}>
               <Box w={["30px"]}>
                 <Image src={reactIcon1}></Image>
@@ -109,7 +111,7 @@ const ArtorianProject = () => {
               <Box w={["30px"]}>
                 <Image src={cssIcon}></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 CSS
               </Text>
             </Flex>
@@ -117,7 +119,7 @@ const ArtorianProject = () => {
               <Box w={["30px"]}>
                 <Image src={reactRouterIcon}></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 React Router
               </Text>
             </Flex>
@@ -125,7 +127,7 @@ const ArtorianProject = () => {
               <Box w={["30px"]}>
                 <Image src={reactIcon2}></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 React Context API - for global state management
               </Text>
             </Flex>
@@ -133,12 +135,12 @@ const ArtorianProject = () => {
               <Box w={["30px"]}>
                 <Image src={firebase} ml="5px"></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 Firebase - for data storage and authentication
               </Text>
             </Flex>
             <Flex display={["flex"]} mt={["20px"]} alignItems={["center"]}>
-              <Text fontFamily={["heading"]}>
+              <Text fontFamily={["heading"]} as="p">
                 <Link
                   border={["1px solid red"]}
                   px={["50px"]}

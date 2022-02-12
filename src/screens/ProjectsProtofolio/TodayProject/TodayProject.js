@@ -48,11 +48,11 @@ const TodayProject = () => {
       >
         <Image
           src={BannerTodaywebp}
-          maxW={["100%"]}
           fallbackSrc={BannerToday}
-          width="auto"
-          height="auto"
+          htmlWidth="679px"
+          htmlHeight="458px"
           loading="lazy"
+          alt="Today App - Banner App"
           px="40px"
           my="40px"
         ></Image>
@@ -74,7 +74,7 @@ const TodayProject = () => {
           px="50px"
         >
           <Box>
-            <Text fontSize={["p"]} fontFamily={["body"]} mb="20px">
+            <Text as="p" fontSize={["p"]} fontFamily={["body"]} mb="20px">
               To do list apps are everywhere, but my biggest issue with them all
               is how bloated they all are. Social login, user tracking, email
               notifications. The list goes on. I wanted something really simple
@@ -84,14 +84,14 @@ const TodayProject = () => {
               quotes for programs and from kanye's tweets.
             </Text>
             <Divider />
-            <Text mb="20px" mt="20px">
+            <Text mb="20px" mt="20px" as="h4">
               Technologies I used for this project:
             </Text>
             <Flex alignItems={["center"]} mb={["10px"]}>
               <Box w={["30px"]}>
                 <Image src={reactIcon1}></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 React
               </Text>
             </Flex>
@@ -99,7 +99,7 @@ const TodayProject = () => {
               <Box w={["30px"]}>
                 <Image src={chakraUiIcon}></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 Chakra UI - for styling the components
               </Text>
             </Flex>
@@ -107,7 +107,7 @@ const TodayProject = () => {
               <Box w={["30px"]}>
                 <Image src={reactRouterIcon}></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 React Router
               </Text>
             </Flex>
@@ -115,7 +115,7 @@ const TodayProject = () => {
               <Box w={["30px"]}>
                 <Image src={reduxIcon}></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 Redux - for state management
               </Text>
             </Flex>
@@ -123,12 +123,12 @@ const TodayProject = () => {
               <Box w={["30px"]}>
                 <Image src={firebase} ml="5px"></Image>
               </Box>
-              <Text fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
+              <Text as="p" fontFamily={["body"]} fontSize={["p"]} ml={["10px"]}>
                 Firebase - for data storage and authentication
               </Text>
             </Flex>
             <Flex display={["flex"]} mt={["20px"]} alignItems={["center"]}>
-              <Text fontFamily={["heading"]}>
+              <Text fontFamily={["heading"]} as="p">
                 <Link
                   border={["1px solid yellow"]}
                   px={["50px"]}

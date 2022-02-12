@@ -22,6 +22,7 @@ const EmailTemplatesProject = () => {
       color={["white"]}
     >
       <Text
+        as="h5"
         fontFamily={["heading"]}
         fontSize={["h5"]}
         fontWeight={"black"}
@@ -30,6 +31,7 @@ const EmailTemplatesProject = () => {
         Email templates
       </Text>
       <Text
+        as="p"
         fontFamily={["body"]}
         fontSize={["p"]}
         textAlign={["center"]}
@@ -49,8 +51,8 @@ const EmailTemplatesProject = () => {
           <Image
             src={emailTemplate1webp}
             fallbackSrc={emailTemplate1}
-            width="auto"
-            height="auto"
+            htmlWidth="339px"
+            htmlHeight="359px"
             loading="lazy"
             alt="An image with a email campagine 1 #Mucioiu Denis"
           ></Image>
@@ -59,8 +61,8 @@ const EmailTemplatesProject = () => {
           <Image
             src={emailTemplate2webp}
             fallbackSrc={emailTemplate2}
-            width="auto"
-            height="auto"
+            htmlWidth="339px"
+            htmlHeight="359px"
             loading="lazy"
             alt="An image with a email campagine 2 #Mucioiu Denis"
           ></Image>
@@ -69,8 +71,8 @@ const EmailTemplatesProject = () => {
           <Image
             src={emailTemplate3webp}
             fallbackSrc={emailTemplate3}
-            width="auto"
-            height="auto"
+            htmlWidth="339px"
+            htmlHeight="359px"
             loading="lazy"
             alt="An image with a email campagine 3 #Mucioiu Denis"
           ></Image>
@@ -79,8 +81,8 @@ const EmailTemplatesProject = () => {
           <Image
             src={emailTemplate4webp}
             fallbackSrc={emailTemplate4}
-            width="auto"
-            height="auto"
+            htmlWidth="339px"
+            htmlHeight="359px"
             loading="lazy"
             alt="An image with a email campagine 4 #Mucioiu Denis"
           ></Image>

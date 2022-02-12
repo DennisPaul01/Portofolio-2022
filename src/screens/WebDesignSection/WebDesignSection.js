@@ -20,6 +20,7 @@ const WebDesignSection = () => {
       className="web-deisgn"
     >
       <Text
+        as="h2"
         fontFamily="heading"
         fontWeight="bold"
         fontSize={["h4", "h3", "h2"]}
@@ -74,6 +75,7 @@ const WebDesignSection = () => {
               textAlign={["center"]}
               mx={"27px"}
               width={["467px"]}
+              as="h2"
             >
               {!changeText ? "See more work " : `Under Construction`}
             </Text>

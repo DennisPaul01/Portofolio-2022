@@ -22,10 +22,12 @@ const PersonalTrainerProject = () => {
           fontSize={["h4"]}
           textAlign={["left"]}
           my={["20px"]}
+          as="h4"
         >
           Duluman Mihai
         </Text>
         <Text
+          as="p"
           fontFamily={["body"]}
           fontSize={["p"]}
           textAlign={["left"]}
@@ -37,8 +39,8 @@ const PersonalTrainerProject = () => {
           mt={["30px"]}
           src={desktopwebp}
           fallbackSrc={desktop}
-          width="auto"
-          height="auto"
+          htmlWidth="347"
+          htmlHeight="486"
           loading="lazy"
           alt="Duluman Mihai images from the website"
         ></Image>
@@ -47,8 +49,8 @@ const PersonalTrainerProject = () => {
         <Image
           src={mobilewebp}
           fallbackSrc={mobile}
-          width="auto"
-          height="auto"
+          htmlWidth="109"
+          htmlHeight="607"
           loading="lazy"
           alt="Duluman Mihai images from the website on the mobile version."
         ></Image>

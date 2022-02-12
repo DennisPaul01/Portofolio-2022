@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Scroll from "react-scroll";
-import { useHistory } from "react-router-dom";
-import { useToast } from "@chakra-ui/react";
-import workerman from "../../assets/workerman.png";
 
+import { Link, useLocation } from "react-router-dom";
+
+import { useToast } from "@chakra-ui/react";
+import { HashLink } from "react-router-hash-link";
 import {
   Box,
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   IconButton,
   Image,
   Text,
@@ -19,14 +17,11 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
 import logo from "../../assets/logo.svg";
+import workerman from "../../assets/workerman.png";
 
 const NavBar = () => {
+  const location = useLocation();
   const [showMenu, setShowMenu] = useState(true);
-  let Links = Scroll.Link;
-  const history = useHistory();
-  const redirectHandler = () => {
-    history.push("/");
-  };
   const toast = useToast();
 
   const BoxError = (
@@ -41,9 +36,11 @@ const NavBar = () => {
       borderRadius={["7px"]}
     >
       <Box>
-        <Image src={workerman} width="30px"></Image>
+        <Image src={workerman} width="30px" alt="Worker man icon"></Image>
       </Box>
-      <Text fontSize={["p"]}> Under Construction</Text>
+      <Text as="p" fontSize={["p"]}>
+        Under Construction
+      </Text>
     </Box>
   );
 
@@ -57,7 +54,13 @@ const NavBar = () => {
       >
         <Box>
           <Link to="/">
-            <Image src={logo} alt="Dennis Paul" w={"100%"} />
+            <Image
+              src={logo}
+              alt="Dennis Paul-Logo"
+              htmlWidth="62"
+              htmlHeight="42"
+              w={"100%"}
+            />
           </Link>
         </Box>
         <Box>
@@ -69,22 +72,13 @@ const NavBar = () => {
             display={["none", "block"]}
           >
             <BreadcrumbItem>
-              <Links
-                onClick={redirectHandler}
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={50}
-                duration={500}
-                to="work"
-                style={{ cursor: "pointer" }}
-              >
+              <HashLink smooth to="/home#work">
                 Work
-              </Links>
+              </HashLink>
             </BreadcrumbItem>
             <BreadcrumbItem>
               <Link
-                to="articles"
+                to={`${location.pathname}#articles`}
                 onClick={() =>
                   toast({
                     position: "top",
@@ -101,18 +95,9 @@ const NavBar = () => {
               <Link to="/about">About me</Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <Links
-                onClick={redirectHandler}
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={50}
-                duration={500}
-                to="contact"
-                style={{ cursor: "pointer" }}
-              >
+              <HashLink smooth to="/home#contact">
                 Contact
-              </Links>
+              </HashLink>
             </BreadcrumbItem>
           </Breadcrumb>
           <Box display={["block", "none"]}>
@@ -155,18 +140,9 @@ const NavBar = () => {
               fontWeight="400"
               fontFamily={"heading"}
             >
-              <Links
-                onClick={redirectHandler}
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={50}
-                duration={500}
-                to="work"
-                style={{ cursor: "pointer" }}
-              >
+              <HashLink smooth to="/home#work">
                 Work
-              </Links>
+              </HashLink>
             </Text>
           </Box>
           <Box as="button" display="flex" mt="20px" display={["block", "none"]}>
@@ -206,18 +182,9 @@ const NavBar = () => {
               fontWeight="400"
               fontFamily={"heading"}
             >
-              <Links
-                onClick={redirectHandler}
-                spy={true}
-                smooth={true}
-                hashSpy={true}
-                offset={50}
-                duration={500}
-                to="contact"
-                style={{ cursor: "pointer" }}
-              >
+              <HashLink smooth to="/home#contact">
                 Contact
-              </Links>
+              </HashLink>
             </Text>
           </Box>
         </Box>

@@ -5,6 +5,7 @@ const MovingText = () => {
   return (
     <div className={classes.container}>
       <Text
+        as="h2"
         mx="auto"
         fontFamily={["heading"]}
         fontSize={["h4", "h3", "h2"]}
@@ -13,6 +14,7 @@ const MovingText = () => {
         web develoment
       </Text>
       <Text
+        as="h2"
         mx="auto"
         fontFamily={["heading"]}
         fontSize={["h4", "h3", "h2"]}
@@ -21,6 +23,7 @@ const MovingText = () => {
         web design
       </Text>
       <Text
+        as="h2"
         mx="auto"
         fontFamily={["heading"]}
         fontSize={["h4", "h3", "h2"]}

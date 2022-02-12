@@ -16,8 +16,15 @@ const CreativePhotoProject = () => {
       alignItems={["center", "center"]}
       color={["white"]}
     >
-      <Image mt={["30px"]} src={logo}></Image>
+      <Image
+        mt={["30px"]}
+        src={logo}
+        alt="Creative Photo - logo"
+        htmlHeight="43"
+        htmlWidth="92"
+      ></Image>
       <Text
+        as="p"
         fontFamily={["body"]}
         fontSize={["p"]}
         textAlign={["center"]}
@@ -29,8 +36,8 @@ const CreativePhotoProject = () => {
       <Image
         src={imagePresentationwebp}
         fallbackSrc={imagePresentation}
-        width="auto"
-        height="auto"
+        htmlHeight="474"
+        htmlWidth="642"
         loading="lazy"
         alt="Creative Photo images from the website"
       ></Image>

@@ -131,6 +131,7 @@ const AboutPage = () => {
               fontSize={["h2"]}
               fontFamily="heading"
               textAlign={["center", "center", "left"]}
+              as="h2"
             >
               The biggest secret — driven by endless curiosity.
             </Text>
@@ -140,8 +141,8 @@ const AboutPage = () => {
               <Image
                 src={photowebp}
                 fallbackSrc={photo}
-                width="auto"
-                height="auto"
+                htmlWidth="568"
+                htmlHeight="616"
                 loading="lazy"
                 alt="A movie I like"
               ></Image>
@@ -149,7 +150,7 @@ const AboutPage = () => {
           </Box>
         </Flex>
         <Box>
-          <Text letterSpacing={["3px"]} color="blue">
+          <Text letterSpacing={["3px"]} color="blue" as="h3">
             INTRODUCTION
           </Text>
           <Text
@@ -158,11 +159,12 @@ const AboutPage = () => {
             mt="30px"
             mb={["50px", "100px"]}
             maxW="1400px"
+            as="h4"
           >
             I’m Denis Paul Mucioiu , a twenty-five-year-old web developer from
             Romania currently living in Timisoara.
           </Text>
-          <Text>
+          <Text as="p">
             I studied at the West University of Timisoara, where I learned to
             observe, collaborate, and empathize. I don’t like to define myself
             by the work I’ve done. I define myself by the work I want to do.
@@ -179,10 +181,10 @@ const AboutPage = () => {
           <Image
             src={ghostbusterswebp}
             fallbackSrc={ghostbusters}
-            width="auto"
-            height="auto"
+            htmlWidth="203"
+            htmlHeight="193"
             loading="lazy"
-            alt="A photo with me"
+            alt="A photo with a movie I like"
             className="fadeIn"
             position={["absolute"]}
             display={["none", "none", "none", "block"]}
@@ -190,8 +192,8 @@ const AboutPage = () => {
           <Image
             src={segawepb}
             fallbackSrc={sega}
-            width="auto"
-            height="auto"
+            htmlWidth="259"
+            htmlHeight="257"
             loading="lazy"
             alt="Hobby"
             position={["absolute"]}
@@ -200,10 +202,11 @@ const AboutPage = () => {
             className="sega"
             display={["none", "none", "none", "block"]}
           ></Image>
-          <Text letterSpacing={["3px"]} color="blue">
+          <Text letterSpacing={["3px"]} color="blue" as="h3">
             WHAT’S MY MISSION?
           </Text>
           <Text
+            as="h4"
             fontFamily={["heading"]}
             fontSize="h4"
             mt="30px"
@@ -211,7 +214,7 @@ const AboutPage = () => {
           >
             To design and develop awesome functional digital experiences
           </Text>
-          <Text maxW={["1200px"]}>
+          <Text maxW={["1200px"]} as="p">
             I'm a self taught developer/ designer so everything new in the web
             development world attract me from the new version of Next.js to the
             back-end part - Deno. In a few words, my mision for the moment is to
@@ -219,7 +222,7 @@ const AboutPage = () => {
           </Text>
         </Box>
         <Box mt={["100px", "200px"]}>
-          <Text letterSpacing={["3px"]} color="blue">
+          <Text letterSpacing={["3px"]} color="blue" as="h3">
             TECHNOLOGIES AND TOOLS I’VE WORKED WITH
           </Text>
           <Flex
@@ -229,45 +232,63 @@ const AboutPage = () => {
             flexWrap="wrap"
           >
             <Box>
-              <Text fontFamily={["heading"]} color="red" mb="30px" mt="30px">
+              <Text
+                fontFamily={["heading"]}
+                color="red"
+                mb="30px"
+                mt="30px"
+                as="h4"
+              >
                 FRONT END
               </Text>
               <Box>
                 <Image
                   src={frontEndSkilswebp}
                   fallbackSrc={frontEndSkils}
-                  width="auto"
-                  height="auto"
+                  htmlWidth="208"
+                  htmlHeight="197"
                   loading="lazy"
                   alt="Front end technologie I know to use"
                 ></Image>
               </Box>
             </Box>
             <Box>
-              <Text fontFamily={["heading"]} color="red" mb="30px" mt="30px">
+              <Text
+                fontFamily={["heading"]}
+                color="red"
+                mb="30px"
+                mt="30px"
+                as="h4"
+              >
                 DESIGN
               </Text>
               <Box>
                 <Image
                   src={designSkilswebp}
                   fallbackSrc={designSkils}
-                  width="auto"
-                  height="auto"
+                  htmlWidth="190"
+                  htmlHeight="198"
                   loading="lazy"
                   alt="Design tools I know to use"
                 ></Image>
               </Box>
             </Box>
             <Box>
-              <Text fontFamily={["heading"]} color="red" mb="30px" mt="30px">
+              <Text
+                fontFamily={["heading"]}
+                color="red"
+                mb="30px"
+                mt="30px"
+                as="h4"
+              >
                 OTHERS
               </Text>
               <Box>
                 <Image
                   src={otherSkilswebp}
                   fallbackSrc={otherSkils}
-                  width="auto"
-                  height="auto"
+                  htmlWidth="187"
+                  htmlHeight="137"
                   loading="lazy"
                   alt="Other Technologies I know to use"
                 ></Image>
@@ -281,10 +302,10 @@ const AboutPage = () => {
           mb={["100px", "150px"]}
           position="relative"
         >
-          <Text letterSpacing={["3px"]} color="blue">
+          <Text letterSpacing={["3px"]} color="blue" as="h3">
             REVIEW
           </Text>
-          <Text mt="30px" mb={["30px"]} maxW="900px">
+          <Text mt="30px" mb={["30px"]} maxW="900px" as="p">
             “The force is strong with Dennis, He is the real deal. He designed
             and developed the kickstarter materials for our new deathstar
             campaign. The amazing work he did for us is as real as this review.”
@@ -294,8 +315,8 @@ const AboutPage = () => {
               <Image
                 src={darthVaderwebp}
                 fallbackSrc={darthVader}
-                width="auto"
-                height="auto"
+                htmlWidth="44"
+                htmlHeight="49"
                 loading="lazy"
                 alt="Darth Vader - review"
                 borderRadius="full"
@@ -317,6 +338,8 @@ const AboutPage = () => {
             className="robot"
             display={["none", "block"]}
             width={["100%", "180px", "180px", "200px", "auto"]}
+            htmlWidth="270"
+            htmlHeight="356"
           ></Image>
         </Box>
       </Container>

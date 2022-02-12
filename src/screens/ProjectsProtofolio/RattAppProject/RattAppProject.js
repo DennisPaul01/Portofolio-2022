@@ -28,6 +28,7 @@ const RattAppProject = () => {
         fontWeight={"black"}
         mt={["30px"]}
         textAlign={["center"]}
+        as="h5"
       >
         Rebranding - RATT APP Timisoara
       </Text>
@@ -43,8 +44,8 @@ const RattAppProject = () => {
           <Image
             src={mockup1webp}
             fallbackSrc={mockup1}
-            width="auto"
-            height="auto"
+            htmlWidth="240"
+            htmlHeight="426"
             loading="lazy"
             alt="RATT TIMISOARA APP - transportation - ticket page"
           ></Image>
@@ -53,8 +54,8 @@ const RattAppProject = () => {
           <Image
             src={mockup2webp}
             fallbackSrc={mockup2}
-            width="auto"
-            height="auto"
+            htmlWidth="240"
+            htmlHeight="426"
             loading="lazy"
             alt="RATT TIMISOARA APP - transportation - waiting page"
           ></Image>
@@ -63,8 +64,8 @@ const RattAppProject = () => {
           <Image
             src={mockup3webp}
             fallbackSrc={mockup3}
-            width="auto"
-            height="auto"
+            htmlWidth="240"
+            htmlHeight="426"
             loading="lazy"
             alt="RATT TIMISOARA APP - transportation - bus stops page"
           ></Image>
@@ -73,8 +74,8 @@ const RattAppProject = () => {
           <Image
             src={mockup4webp}
             fallbackSrc={mockup4}
-            width="auto"
-            height="auto"
+            htmlWidth="240"
+            htmlHeight="426"
             loading="lazy"
             alt="RATT TIMISOARA APP - transportation - disponible trains page"
           ></Image>
