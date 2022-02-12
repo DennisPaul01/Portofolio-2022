@@ -71,18 +71,17 @@ const TodayProject = () => {
           justifyContent={["space-around"]}
           bg="#21437A"
           color="white"
-          px="50px"
+          px="30px"
         >
           <Box>
             <Text as="p" fontSize={["p"]} fontFamily={["body"]} mb="20px">
               To do list apps are everywhere, but my biggest issue with them all
               is how bloated they all are. Social login, user tracking, email
               notifications. The list goes on. I wanted something really simple
-              to get the job done, so I built it. <br></br> <br></br>
-              Aside from updating your account details, all you can do is create
-              tasks or lists. Simple as that. There is included a section with
-              quotes for programs and from kanye's tweets.
+              to get the job done, so I built it. <br></br>There is included a
+              section with quotes for programs and from kanye's tweets.
             </Text>
+
             <Divider />
             <Text mb="20px" mt="20px" as="h4">
               Technologies I used for this project:
