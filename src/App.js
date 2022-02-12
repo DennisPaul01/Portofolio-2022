@@ -22,14 +22,14 @@ function App() {
       <main>
         <Suspense fallback={<LazySpinner></LazySpinner>}>
           <Switch>
-            <Route path="/home" exact>
+            <Route path="/" exact>
               <HomePage></HomePage>
             </Route>
             <Route path="/about" exact>
               <AboutPage></AboutPage>
             </Route>
             <Route path="*">
-              <Redirect to="/home"></Redirect>
+              <Redirect to="/"></Redirect>
             </Route>
           </Switch>
         </Suspense>

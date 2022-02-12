@@ -72,7 +72,7 @@ const NavBar = () => {
             display={["none", "block"]}
           >
             <BreadcrumbItem>
-              <HashLink smooth to="/home#work">
+              <HashLink smooth to="/#work">
                 Work
               </HashLink>
             </BreadcrumbItem>
@@ -95,7 +95,7 @@ const NavBar = () => {
               <Link to="/about">About me</Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <HashLink smooth to="/home#contact">
+              <HashLink smooth to="/#contact">
                 Contact
               </HashLink>
             </BreadcrumbItem>
@@ -140,7 +140,7 @@ const NavBar = () => {
               fontWeight="400"
               fontFamily={"heading"}
             >
-              <HashLink smooth to="/home#work">
+              <HashLink smooth to="/#work">
                 Work
               </HashLink>
             </Text>
@@ -182,7 +182,7 @@ const NavBar = () => {
               fontWeight="400"
               fontFamily={"heading"}
             >
-              <HashLink smooth to="/home#contact">
+              <HashLink smooth to="/#contact">
                 Contact
               </HashLink>
             </Text>
