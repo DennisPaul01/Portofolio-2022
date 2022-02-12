@@ -1,3 +1,6 @@
+import { Element } from "react-scroll";
+import ReactGA from "react-ga4";
+
 import {
   Flex,
   Container,
@@ -11,8 +14,6 @@ import {
 import gitHub from "../../assets/iconmonstr-github-1 1.svg";
 import linkedin from "../../assets/iconmonstr-linkedin-3 1.svg";
 import ContactForm from "../../components/ContactForm/ContactForm";
-import { Element } from "react-scroll";
-import ReactGA from "react-ga4";
 
 const ContactSection = () => {
   const linkedinHandler = () => {
@@ -114,7 +115,7 @@ const ContactSection = () => {
                 _active={{ bacgkoundColor: "none" }}
                 href="https://www.linkedin.com/in/denis-paul-mucioiu-3358aa182/"
               >
-                <Image src={linkedin}></Image>
+                <Image src={linkedin} alt="My linkeding profile"></Image>
               </Button>
             </Box>
             <Box>
@@ -127,6 +128,7 @@ const ContactSection = () => {
                 _hover={{ backgroundColor: "none", outline: "none" }}
                 _active={{ bacgkoundColor: "none" }}
                 href="https://github.com/DennisPaul01"
+                alt="My github profile"
               >
                 <Image src={gitHub}></Image>
               </Button>

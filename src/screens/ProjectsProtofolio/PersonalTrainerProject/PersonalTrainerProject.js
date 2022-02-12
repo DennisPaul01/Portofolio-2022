@@ -1,7 +1,9 @@
-import { Box, Image, Text, Flex } from "@chakra-ui/react";
+import { Box, Image, Text } from "@chakra-ui/react";
 
 import desktop from "../../../assets/personal-trainer/Mask Group.png";
 import mobile from "../../../assets/personal-trainer/Mask Group-1.png";
+import desktopwebp from "../../../assets/personal-trainer/Mask-Group.webp";
+import mobilewebp from "../../../assets/personal-trainer/Mask-Group-1.webp";
 
 const PersonalTrainerProject = () => {
   return (
@@ -31,10 +33,25 @@ const PersonalTrainerProject = () => {
         >
           Duluman Mihai it’s a website for a <br></br>personal trainer.
         </Text>
-        <Image mt={["30px"]} src={desktop}></Image>
+        <Image
+          mt={["30px"]}
+          src={desktopwebp}
+          fallbackSrc={desktop}
+          width="auto"
+          height="auto"
+          loading="lazy"
+          alt="Duluman Mihai images from the website"
+        ></Image>
       </Box>
       <Box alignSelf={["flex-end"]} display={["none", "block"]}>
-        <Image src={mobile}></Image>
+        <Image
+          src={mobilewebp}
+          fallbackSrc={mobile}
+          width="auto"
+          height="auto"
+          loading="lazy"
+          alt="Duluman Mihai images from the website on the mobile version."
+        ></Image>
       </Box>
     </Box>
   );

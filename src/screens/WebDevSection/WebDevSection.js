@@ -1,7 +1,9 @@
+import { Element } from "react-scroll";
+
 import { Text, Container, Grid, GridItem, Box } from "@chakra-ui/react";
+
 import ArtorianProject from "../ProjectsProtofolio/ArtorianProject/ArtorianProject";
 import TodayProject from "../ProjectsProtofolio/TodayProject/TodayProject";
-import { Element } from "react-scroll";
 
 const WebDevSection = () => {
   return (

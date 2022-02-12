@@ -1,7 +1,14 @@
 import { useEffect, useRef } from "react";
-import { Text, Flex, Container, Image, Box } from "@chakra-ui/react";
-import photo from "../assets/about_me/foto_3.png";
 
+import { useIntersection } from "react-use";
+
+import { gsap } from "gsap";
+
+import ReactGA from "react-ga4";
+
+import { Text, Flex, Container, Image, Box } from "@chakra-ui/react";
+
+import photo from "../assets/about_me/foto_3.png";
 import frontEndSkils from "../assets/about_me/front-end.png";
 import designSkils from "../assets/about_me/design.png";
 import otherSkils from "../assets/about_me/others.png";
@@ -9,9 +16,14 @@ import darthVader from "../assets/about_me/darth-vader-icon.png";
 import ghostbusters from "../assets/about_me/ghostbusters.png";
 import robot from "../assets/about_me/robot-2.png";
 import sega from "../assets/about_me/sega.png";
-import { useIntersection } from "react-use";
-import { gsap } from "gsap";
-import ReactGA from "react-ga4";
+import photowebp from "../assets/about_me/foto_3.webp";
+import frontEndSkilswebp from "../assets/about_me/front-end.webp";
+import designSkilswebp from "../assets/about_me/design.webp";
+import otherSkilswebp from "../assets/about_me/others.webp";
+import darthVaderwebp from "../assets/about_me/darth-vader-icon.webp";
+import ghostbusterswebp from "../assets/about_me/ghostbusters.webp";
+import robotwebp from "../assets/about_me/robot-2.webp";
+import segawepb from "../assets/about_me/sega.webp";
 
 const AboutPage = () => {
   const intersectionRefGhost = useRef(null);
@@ -125,7 +137,14 @@ const AboutPage = () => {
           </Box>
           <Box>
             <Box position={["relative"]}>
-              <Image src={photo}></Image>
+              <Image
+                src={photowebp}
+                fallbackSrc={photo}
+                width="auto"
+                height="auto"
+                loading="lazy"
+                alt="A movie I like"
+              ></Image>
             </Box>
           </Box>
         </Flex>
@@ -158,13 +177,23 @@ const AboutPage = () => {
           position="relative"
         >
           <Image
-            src={ghostbusters}
+            src={ghostbusterswebp}
+            fallbackSrc={ghostbusters}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="A photo with me"
             className="fadeIn"
             position={["absolute"]}
             display={["none", "none", "none", "block"]}
           ></Image>
           <Image
-            src={sega}
+            src={segawepb}
+            fallbackSrc={sega}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="Hobby"
             position={["absolute"]}
             right="-100"
             bottom="50"
@@ -204,7 +233,14 @@ const AboutPage = () => {
                 FRONT END
               </Text>
               <Box>
-                <Image src={frontEndSkils}></Image>
+                <Image
+                  src={frontEndSkilswebp}
+                  fallbackSrc={frontEndSkils}
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
+                  alt="Front end technologie I know to use"
+                ></Image>
               </Box>
             </Box>
             <Box>
@@ -212,7 +248,14 @@ const AboutPage = () => {
                 DESIGN
               </Text>
               <Box>
-                <Image src={designSkils}></Image>
+                <Image
+                  src={designSkilswebp}
+                  fallbackSrc={designSkils}
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
+                  alt="Design tools I know to use"
+                ></Image>
               </Box>
             </Box>
             <Box>
@@ -220,7 +263,14 @@ const AboutPage = () => {
                 OTHERS
               </Text>
               <Box>
-                <Image src={otherSkils}></Image>
+                <Image
+                  src={otherSkilswebp}
+                  fallbackSrc={otherSkils}
+                  width="auto"
+                  height="auto"
+                  loading="lazy"
+                  alt="Other Technologies I know to use"
+                ></Image>
               </Box>
             </Box>
           </Flex>
@@ -241,14 +291,26 @@ const AboutPage = () => {
           </Text>
           <Flex alignItems={["center"]}>
             <Box>
-              <Image src={darthVader} borderRadius="full"></Image>
+              <Image
+                src={darthVaderwebp}
+                fallbackSrc={darthVader}
+                width="auto"
+                height="auto"
+                loading="lazy"
+                alt="Darth Vader - review"
+                borderRadius="full"
+              ></Image>
             </Box>
             <Box ml="10px">
               <Text>Darth Vader</Text>
             </Box>
           </Flex>
           <Image
-            src={robot}
+            src={robotwebp}
+            fallbackSrc={robot}
+            height="auto"
+            loading="lazy"
+            alt="Star Wars"
             position={["absolute"]}
             top={["0", "130px", "110px", "90px", "0"]}
             right="0"

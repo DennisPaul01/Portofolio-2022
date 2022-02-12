@@ -7,6 +7,7 @@ import {
   Divider,
   Link,
 } from "@chakra-ui/react";
+import BannerTodaywebp from "../../../assets/today/image-banner-today.webp";
 import BannerToday from "../../../assets/today/image-banner-today.png";
 import { useState } from "react";
 
@@ -45,7 +46,16 @@ const TodayProject = () => {
         alignItems={["center"]}
         justifyContent={["center"]}
       >
-        <Image src={BannerToday} maxW={["100%"]} px="40px" my="40px"></Image>
+        <Image
+          src={BannerTodaywebp}
+          maxW={["100%"]}
+          fallbackSrc={BannerToday}
+          width="auto"
+          height="auto"
+          loading="lazy"
+          px="40px"
+          my="40px"
+        ></Image>
       </Box>
       {showModal && (
         <Box

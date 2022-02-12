@@ -10,7 +10,7 @@ import cow from "../../assets/cow.webp";
 import cowpng from "../../assets/cow.png";
 import MovingText from "../../components/MovingText/MovingText";
 
-export const IntroSection = () => {
+const IntroSection = () => {
   return (
     <Container
       maxW="1600px"
@@ -42,6 +42,7 @@ export const IntroSection = () => {
             alt="An image with a ozn"
             height="209px"
             width="403px"
+            loading="lazy"
           />
           <Image
             src={light}
@@ -50,6 +51,7 @@ export const IntroSection = () => {
             alt="An image with a green light"
             height="472px"
             width="343px"
+            loading="lazy"
           />
           <Image
             src={cow}
@@ -58,9 +60,12 @@ export const IntroSection = () => {
             alt="An image with a cow"
             height="267px"
             width="301px"
+            loading="lazy"
           />
         </Box>
       </Box>
     </Container>
   );
 };
+
+export default IntroSection;

@@ -1,8 +1,13 @@
-import { Box, Image, Text, Flex, Button, Divider } from "@chakra-ui/react";
+import { Box, Image, Text, Flex } from "@chakra-ui/react";
+
 import emailTemplate1 from "../../../assets/email-templates/Mask Group-1.png";
 import emailTemplate2 from "../../../assets/email-templates/Mask Group-2.png";
 import emailTemplate3 from "../../../assets/email-templates/Mask Group-3.png";
 import emailTemplate4 from "../../../assets/email-templates/Mask Group.png";
+import emailTemplate1webp from "../../../assets/email-templates/Mask Group-1.webp";
+import emailTemplate2webp from "../../../assets/email-templates/Mask-Group-2.webp";
+import emailTemplate3webp from "../../../assets/email-templates/Mask-Group-3.webp";
+import emailTemplate4webp from "../../../assets/email-templates/Mask Group.webp";
 
 const EmailTemplatesProject = () => {
   return (
@@ -41,16 +46,44 @@ const EmailTemplatesProject = () => {
         alignItems={["center", "center"]}
       >
         <Box>
-          <Image src={emailTemplate1}></Image>
+          <Image
+            src={emailTemplate1webp}
+            fallbackSrc={emailTemplate1}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="An image with a email campagine 1 #Mucioiu Denis"
+          ></Image>
         </Box>
         <Box>
-          <Image src={emailTemplate2}></Image>
+          <Image
+            src={emailTemplate2webp}
+            fallbackSrc={emailTemplate2}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="An image with a email campagine 2 #Mucioiu Denis"
+          ></Image>
         </Box>
         <Box>
-          <Image src={emailTemplate3}></Image>
+          <Image
+            src={emailTemplate3webp}
+            fallbackSrc={emailTemplate3}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="An image with a email campagine 3 #Mucioiu Denis"
+          ></Image>
         </Box>
         <Box>
-          <Image src={emailTemplate4}></Image>
+          <Image
+            src={emailTemplate4webp}
+            fallbackSrc={emailTemplate4}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="An image with a email campagine 4 #Mucioiu Denis"
+          ></Image>
         </Box>
       </Flex>
     </Box>

@@ -1,9 +1,15 @@
-import { Box, Image, Text, Flex, Button, Divider } from "@chakra-ui/react";
+import { Box, Image, Text, Flex } from "@chakra-ui/react";
+
 import mockup1 from "../../../assets/ratt-app/mockup-1.png";
 import mockup2 from "../../../assets/ratt-app/mockup-2.png";
 import mockup3 from "../../../assets/ratt-app/mockup-3.png";
 import mockup4 from "../../../assets/ratt-app/mockup-4.png";
 import mockup5 from "../../../assets/ratt-app/mockup-5.png";
+import mockup1webp from "../../../assets/ratt-app/mockup-1.webp";
+import mockup2webp from "../../../assets/ratt-app/mockup-2.webp";
+import mockup3webp from "../../../assets/ratt-app/mockup-3.webp";
+import mockup4webp from "../../../assets/ratt-app/mockup-4.webp";
+import mockup5webp from "../../../assets/ratt-app/mockup-5.webp";
 
 const RattAppProject = () => {
   return (
@@ -34,19 +40,54 @@ const RattAppProject = () => {
         flexDirection={["column", "column", "column", "row"]}
       >
         <Box mt={["20px"]}>
-          <Image src={mockup1}></Image>
+          <Image
+            src={mockup1webp}
+            fallbackSrc={mockup1}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="RATT TIMISOARA APP - transportation - ticket page"
+          ></Image>
         </Box>
         <Box mt={["20px"]}>
-          <Image src={mockup2}></Image>
+          <Image
+            src={mockup2webp}
+            fallbackSrc={mockup2}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="RATT TIMISOARA APP - transportation - waiting page"
+          ></Image>
         </Box>
         <Box mt={["20px"]}>
-          <Image src={mockup3}></Image>
+          <Image
+            src={mockup3webp}
+            fallbackSrc={mockup3}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="RATT TIMISOARA APP - transportation - bus stops page"
+          ></Image>
         </Box>
         <Box mt={["20px"]}>
-          <Image src={mockup4}></Image>
+          <Image
+            src={mockup4webp}
+            fallbackSrc={mockup4}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="RATT TIMISOARA APP - transportation - disponible trains page"
+          ></Image>
         </Box>
         <Box mt={["20px"]}>
-          <Image src={mockup5}></Image>
+          <Image
+            src={mockup5webp}
+            fallbackSrc={mockup5}
+            width="auto"
+            height="auto"
+            loading="lazy"
+            alt="RATT TIMISOARA APP - transportation - qr code page"
+          ></Image>
         </Box>
       </Flex>
     </Box>

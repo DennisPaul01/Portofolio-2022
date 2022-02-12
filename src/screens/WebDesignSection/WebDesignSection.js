@@ -1,5 +1,7 @@
-import { Text, Container, Grid, GridItem, Box } from "@chakra-ui/react";
 import { useState } from "react";
+
+import { Text, Container, Grid, GridItem, Box } from "@chakra-ui/react";
+
 import BannersProject from "../ProjectsProtofolio/BannersProject/BannersProject";
 import CreativePhotoProject from "../ProjectsProtofolio/CreativePhotoProject/CreativePhotoProject";
 import EmailTemplatesProject from "../ProjectsProtofolio/EmailTemplatesProject/EmailTemplatesProject";

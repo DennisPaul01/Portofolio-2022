@@ -1,9 +1,11 @@
-import NavBar from "./components/NavBar/NavBar";
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
+
+import ReactGA from "react-ga4";
+
+import NavBar from "./components/NavBar/NavBar";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
-import ReactGA from "react-ga4";
 
 function App() {
   ReactGA.initialize("UA-136464204-2");

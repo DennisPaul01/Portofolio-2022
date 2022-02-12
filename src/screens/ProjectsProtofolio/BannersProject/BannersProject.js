@@ -1,18 +1,14 @@
-import {
-  Box,
-  Image,
-  Text,
-  Flex,
-  Button,
-  Divider,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Box, Image, Text, Grid, GridItem } from "@chakra-ui/react";
 
 import banner1 from "../../../assets/banners/banner-1.jpg";
-import banner2 from "../../../assets/banners/banner-2.gif";
-import banner3 from "../../../assets/banners/banner-3.gif";
-import banner4 from "../../../assets/banners/banner-4.gif";
+import banner2mp4 from "../../../assets/banners/banner-2.mp4";
+import banner3mp4 from "../../../assets/banners/banner-3.mp4";
+import banner4mp4 from "../../../assets/banners/banner-4.mp4";
+
+import banner1webp from "../../../assets/banners/banner-1.webp";
+import banner2webm from "../../../assets/banners/banner-2.webm";
+import banner3webm from "../../../assets/banners/banner-3.webm";
+import banner4webm from "../../../assets/banners/banner-4.webm";
 
 const BannersProject = () => {
   return (
@@ -31,22 +27,45 @@ const BannersProject = () => {
         </GridItem>
         <GridItem>
           <Box>
-            <Image src={banner1} w={["100%"]}></Image>
+            <Image
+              src={banner1webp}
+              fallbackSrc={banner1}
+              loading="lazy"
+              w={["100%"]}
+              alt="This image is a banner I made for my job"
+            ></Image>
           </Box>
         </GridItem>
         <GridItem>
           <Box>
-            <Image src={banner2} w={["100%"]}></Image>
+            <video muted autoPlay={"autoplay"} loop style={{ width: "100%" }}>
+              <source src={banner2webm} type="video/webm" />
+              <source src={banner2mp4} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </Box>
         </GridItem>
         <GridItem colSpan={2}>
           <Box>
-            <Image src={banner3} w={["100%"]}></Image>
+            <video width="100%" muted autoPlay={"autoplay"} loop>
+              <source src={banner3webm} type="video/webm" />
+              <source src={banner3mp4} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </Box>
         </GridItem>
         <GridItem>
           <Box>
-            <Image src={banner4} maxH="353px" w={["100%"]}></Image>
+            <video
+              muted
+              autoPlay={"autoplay"}
+              loop
+              style={{ height: "353px", width: "100%", background: "#AEACD5" }}
+            >
+              <source src={banner4webm} type="video/webm" />
+              <source src={banner4mp4} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </Box>
         </GridItem>
       </Grid>

@@ -1,5 +1,7 @@
-import { Box, Image, Text, Flex, Button, Link } from "@chakra-ui/react";
 import { useState } from "react";
+
+import ReactGA from "react-ga4";
+import { Box, Image, Text, Flex, Button, Link } from "@chakra-ui/react";
 
 import artorian1 from "../../../assets/artorian/artorian-1.png";
 import artorian2 from "../../../assets/artorian/artorian-2.png";
@@ -16,10 +18,9 @@ import reactRouterIcon from "../../../assets/artorian/react-router-seeklogo.com-
 import firebase from "../../../assets/artorian/firebase-seeklogo.com-1.svg";
 import gitIcon from "../../../assets/artorian/git-artorian.svg";
 
-import ReactGA from "react-ga4";
-
 const ArtorianProject = () => {
   const [showModal, setShowModal] = useState(false);
+
   const artStoreHandler = () => {
     ReactGA.event({
       category: "Button",
@@ -51,6 +52,7 @@ const ArtorianProject = () => {
             alt=" Artorian Gallery is a personal project where I built an
             art store."
             mt="20px"
+            loading="lazy"
           />
         </Box>
         <Box>
@@ -59,6 +61,7 @@ const ArtorianProject = () => {
             maxW={["100%"]}
             mt="20px"
             ml={["5px", "20px", "0"]}
+            loading="lazy"
           ></Image>
           <Image
             maxW={["100%"]}
@@ -68,6 +71,7 @@ const ArtorianProject = () => {
             height="auto"
             alt=" Artorian Gallery - buy page"
             mt="20px"
+            loading="lazy"
           ></Image>
         </Box>
       </Box>
@@ -165,12 +169,12 @@ const ArtorianProject = () => {
           </Box>
           <Box display={["none", "block", "block"]}>
             <Image
-              src={artorianColors}
               width={["70%", "70%", "80%", "100%"]}
               src={artorianColorswepb}
               fallbackSrc={artorianColors}
               height="auto"
               alt=" Artorian Gallery - design"
+              loading="lazy"
             ></Image>
           </Box>
         </Box>

@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import db from "../../data/firebase";
+import { collection, setDoc, doc } from "firebase/firestore";
+
 import {
   FormControl,
   FormLabel,
@@ -12,15 +15,13 @@ import {
   useToast,
 } from "@chakra-ui/react";
 
-import db from "../../data/firebase";
-import { collection, setDoc, doc } from "firebase/firestore";
-
 const ContactForm = () => {
   const toast = useToast();
 
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
+
   const [nameStatus, setNameStatus] = useState(false);
   const [emailStatus, setEmailStatus] = useState(false);
   const [messageStatus, setMessageStatus] = useState(false);
