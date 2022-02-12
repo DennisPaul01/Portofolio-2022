@@ -32,6 +32,8 @@ const BannersProject = () => {
               fallbackSrc={banner1}
               loading="lazy"
               w={["100%"]}
+              htmlHeight="281"
+              htmlWidth="337"
               alt="This image is a banner I made for my job"
             ></Image>
           </Box>
