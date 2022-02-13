@@ -31,7 +31,7 @@ const TodayProject = () => {
     setShowModal(!showModal);
   };
   const redirectWebsite = () => {
-    const url = "https://today-todo-app.netlify.app/";
+    const url = "http://do-today.work/";
     window.open(url, "_blank");
   };
   return (
@@ -137,7 +137,7 @@ const TodayProject = () => {
                   _hover={{ backgroundColor: "yellow", color: "white" }}
                   target="_blank"
                   rel="noreferrer"
-                  href="https://today-todo-app.netlify.app/"
+                  href="http://do-today.work/"
                 >
                   Check website
                 </Link>
@@ -150,7 +150,7 @@ const TodayProject = () => {
                 as="a"
                 _hover={{ backgroundColor: "none", outline: "none" }}
                 _active={{ bacgkoundColor: "none" }}
-                href="https://github.com/DennisPaul01/Today-Todo-App"
+                href="http://do-today.work/"
               >
                 <Image src={gitIcon}></Image>
               </Button>
