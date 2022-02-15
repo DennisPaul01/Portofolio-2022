@@ -13,7 +13,7 @@ import MovingText from "../../components/MovingText/MovingText";
 const IntroSection = () => {
   return (
     <Container
-      maxW="1600px"
+      maxW={["1600px"]}
       mb={["100px", "200px", "350px"]}
       as="section"
       className="intro-section"

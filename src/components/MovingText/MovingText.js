@@ -11,7 +11,7 @@ const MovingText = () => {
         fontSize={["h4", "h3", "h2"]}
         className={classes.text1}
       >
-        web develoment
+        web dev
       </Text>
       <Text
         as="h2"

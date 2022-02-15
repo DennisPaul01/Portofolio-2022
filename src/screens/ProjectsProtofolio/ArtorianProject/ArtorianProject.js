@@ -96,7 +96,7 @@ const ArtorianProject = () => {
               Artorian Gallery is a personal <br></br> project where I built an
               art store.
             </Text>
-            <Text as="h4" mb="20px">
+            <Text as="p" mb="20px">
               Technologies I used for this project:
             </Text>
             <Flex alignItems={["center"]} mb={["10px"]}>

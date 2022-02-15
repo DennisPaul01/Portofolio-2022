@@ -150,7 +150,7 @@ const TodayProject = () => {
                 as="a"
                 _hover={{ backgroundColor: "none", outline: "none" }}
                 _active={{ bacgkoundColor: "none" }}
-                href="http://do-today.work/"
+                href="https://github.com/DennisPaul01/Today-Todo-App"
               >
                 <Image src={gitIcon}></Image>
               </Button>

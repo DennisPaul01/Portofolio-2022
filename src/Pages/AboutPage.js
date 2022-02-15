@@ -150,7 +150,7 @@ const AboutPage = () => {
           </Box>
         </Flex>
         <Box>
-          <Text letterSpacing={["3px"]} color="blue" as="h3">
+          <Text letterSpacing={["3px"]} color="blue" as="h4" fontSize="2rem">
             INTRODUCTION
           </Text>
           <Text
@@ -197,12 +197,12 @@ const AboutPage = () => {
             loading="lazy"
             alt="Hobby"
             position={["absolute"]}
-            right="-100"
+            right="50"
             bottom="50"
             className="sega"
-            display={["none", "none", "none", "block"]}
+            display={["none", "none", "none", "none", "block"]}
           ></Image>
-          <Text letterSpacing={["3px"]} color="blue" as="h3">
+          <Text letterSpacing={["3px"]} color="blue" as="h4" fontSize="2rem">
             WHAT’S MY MISSION?
           </Text>
           <Text
@@ -222,14 +222,15 @@ const AboutPage = () => {
           </Text>
         </Box>
         <Box mt={["100px", "200px"]}>
-          <Text letterSpacing={["3px"]} color="blue" as="h3">
+          <Text letterSpacing={["3px"]} color="blue" as="h4" fontSize="2rem">
             TECHNOLOGIES AND TOOLS I’VE WORKED WITH
           </Text>
           <Flex
             maxW="900px"
             justifyContent={["center", "space-between", "space-between"]}
             mt={["10px", "50px"]}
-            flexWrap="wrap"
+            alignItems={["center", "center"]}
+            flexDirection={["column", "column", "row"]}
           >
             <Box>
               <Text
@@ -238,6 +239,7 @@ const AboutPage = () => {
                 mb="30px"
                 mt="30px"
                 as="h4"
+                fontSize="2rem"
               >
                 FRONT END
               </Text>
@@ -259,6 +261,7 @@ const AboutPage = () => {
                 mb="30px"
                 mt="30px"
                 as="h4"
+                fontSize="2rem"
               >
                 DESIGN
               </Text>
@@ -280,6 +283,7 @@ const AboutPage = () => {
                 mb="30px"
                 mt="30px"
                 as="h4"
+                fontSize="2rem"
               >
                 OTHERS
               </Text>
@@ -302,7 +306,7 @@ const AboutPage = () => {
           mb={["100px", "150px"]}
           position="relative"
         >
-          <Text letterSpacing={["3px"]} color="blue" as="h3">
+          <Text letterSpacing={["3px"]} color="blue" as="h4" fontSize="2rem">
             REVIEW
           </Text>
           <Text mt="30px" mb={["30px"]} maxW="900px" as="p">

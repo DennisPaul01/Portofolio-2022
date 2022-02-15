@@ -17,12 +17,12 @@ export const customTheme = extendTheme({
     mono: "Menlo, monospace",
   },
   fontSizes: {
-    p: "18px",
-    h5: "45px",
-    h4: "30px",
-    h3: "35px",
-    h2: "70px",
-    h1: "85px",
+    p: "1.8rem",
+    h5: "4.5rem",
+    h4: "3rem",
+    h3: "3.5rem",
+    h2: "7rem",
+    h1: "8.5rem",
   },
   fontWeights: {
     regular: 400,

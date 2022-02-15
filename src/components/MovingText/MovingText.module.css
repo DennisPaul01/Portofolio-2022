@@ -12,7 +12,7 @@
   margin: auto;
   padding: 0px 40px;
   position: absolute;
-
+  width: 600px;
   z-index: 1;
   animation: webDevAnimation;
   animation-duration: 6s;
