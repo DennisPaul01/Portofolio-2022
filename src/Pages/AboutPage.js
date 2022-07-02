@@ -12,6 +12,7 @@ import photo from "../assets/about_me/foto_3.png";
 import frontEndSkils from "../assets/about_me/front-end.png";
 import designSkils from "../assets/about_me/design.png";
 import otherSkils from "../assets/about_me/others.png";
+import backendSkils from "../assets/about_me/backend.png";
 import darthVader from "../assets/about_me/darth-vader-icon.png";
 import ghostbusters from "../assets/about_me/ghostbusters.png";
 import robot from "../assets/about_me/robot-2.png";
@@ -20,6 +21,7 @@ import photowebp from "../assets/about_me/foto_3.webp";
 import frontEndSkilswebp from "../assets/about_me/front-end.webp";
 import designSkilswebp from "../assets/about_me/design.webp";
 import otherSkilswebp from "../assets/about_me/others.webp";
+import backendSkilswebp from "../assets/about_me/backend.webp";
 import darthVaderwebp from "../assets/about_me/darth-vader-icon.webp";
 import ghostbusterswebp from "../assets/about_me/ghostbusters.webp";
 import robotwebp from "../assets/about_me/robot-2.webp";
@@ -226,10 +228,9 @@ const AboutPage = () => {
             TECHNOLOGIES AND TOOLS I’VE WORKED WITH
           </Text>
           <Flex
-            maxW="900px"
+            maxW="1200px"
             justifyContent={["center", "space-between", "space-between"]}
             mt={["10px", "50px"]}
-            alignItems={["center", "center"]}
             flexDirection={["column", "column", "row"]}
           >
             <Box>
@@ -254,6 +255,30 @@ const AboutPage = () => {
                 ></Image>
               </Box>
             </Box>
+
+            <Box>
+              <Text
+                fontFamily={["heading"]}
+                color="red"
+                mb="30px"
+                mt="30px"
+                as="h4"
+                fontSize="2rem"
+              >
+                BACKEND
+              </Text>
+              <Box>
+                <Image
+                  src={backendSkilswebp}
+                  fallbackSrc={backendSkils}
+                  htmlWidth="237"
+                  htmlHeight="148"
+                  loading="lazy"
+                  alt="Front end technologie I know to use"
+                ></Image>
+              </Box>
+            </Box>
+
             <Box>
               <Text
                 fontFamily={["heading"]}
@@ -291,8 +316,8 @@ const AboutPage = () => {
                 <Image
                   src={otherSkilswebp}
                   fallbackSrc={otherSkils}
-                  htmlWidth="187"
-                  htmlHeight="137"
+                  htmlWidth="188"
+                  htmlHeight="187"
                   loading="lazy"
                   alt="Other Technologies I know to use"
                 ></Image>
