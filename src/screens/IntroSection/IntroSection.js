@@ -15,6 +15,7 @@ const IntroSection = () => {
     <Container
       maxW={["1600px"]}
       mb={["100px", "200px", "350px"]}
+      px={["30px", "30px", "30px", "30px", "0"]}
       as="section"
       className="intro-section"
     >

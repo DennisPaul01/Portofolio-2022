@@ -85,7 +85,7 @@ const RoFlowerApiProject = () => {
           color="white"
           px="10px"
         >
-          <Box w="50%">
+          <Box w={["100%", "100%", "100%", "50%"]}>
             <Text fontSize={["h4"]} fontFamily={["h4"]} mb="20px" as="h4">
               RoFlowerAPI it's a RESTful API made with the porpouse the help
               Romanian people to find rare flowers on their teritory.
@@ -172,7 +172,7 @@ const RoFlowerApiProject = () => {
               </Button>
             </Flex>
           </Box>
-          <Box display={["none", "block", "block"]}>
+          <Box display={["none", "none", "block"]}>
             <Image
               width={["70%", "70%", "80%", "100%"]}
               src={roflowerapiColorswepb}
