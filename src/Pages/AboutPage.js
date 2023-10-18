@@ -380,7 +380,7 @@ const AboutPage = () => {
         ref={intersectionRefRobot}
       >
         <Text color="white" py="16px" textAlign={["center"]}>
-          Copyright © Mucioiu Denis Paul 2022. All rights reserved.
+          Copyright © Mucioiu Denis Paul 2021. All rights reserved.
         </Text>
       </Box>
     </>

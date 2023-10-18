@@ -101,7 +101,7 @@ const ContactSection = () => {
             You can donwload my cv from
             <Link
               href={
-                "https://drive.google.com/file/d/1R7dLRYBXH3PEVPU5C3q3WY-ioW_ifaVv/view?usp=sharing"
+                "https://drive.google.com/file/d/1VB8qlwVY-TjHvcmPOJYYjMeolblPCDLC/view?usp=sharing"
               }
               target="_blank"
               ml={["5px"]}
