@@ -132,7 +132,7 @@ const NavBar = () => {
           bg="white"
           alignItems="center"
         >
-          <Box as="button" display="flex" mt="20px" display={["block", "none"]}>
+          <Box as="button" mt="20px" display={["block", "none"]}>
             <Text
               alignItems="center"
               color="black"
@@ -145,7 +145,7 @@ const NavBar = () => {
               </HashLink>
             </Text>
           </Box>
-          <Box as="button" display="flex" mt="20px" display={["block", "none"]}>
+          <Box as="button" mt="20px" display={["block", "none"]}>
             <Text
               color="black"
               fontSize="p"
@@ -164,7 +164,7 @@ const NavBar = () => {
             </Text>
           </Box>
 
-          <Box as="button" display="flex" mt="20px" display={["block", "none"]}>
+          <Box as="button"  mt="20px" display={["block", "none"]}>
             <Text
               color="black"
               fontSize="p"
@@ -175,7 +175,7 @@ const NavBar = () => {
             </Text>
           </Box>
 
-          <Box as="button" display="flex" mt="20px" display={["block", "none"]}>
+          <Box as="button"  mt="20px" display={["block", "none"]}>
             <Text
               color="black"
               fontSize="p"
