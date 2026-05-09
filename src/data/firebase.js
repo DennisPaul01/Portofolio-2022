@@ -1,11 +1,5 @@
-//Brings in the core functionality
-import * as firebase from "firebase/app";
+import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-
-// This bring in the firestoare functionality
-
-import "firebase/auth";
-import "firebase/firestore";
 
 //TODO: asta nu are trebuie sa fie aici
 
@@ -31,8 +25,8 @@ if (!firebaseConfig.messagingSenderId)
   throw new Error("Missing fire config: messagingSenderId");
 if (!firebaseConfig.appId) throw new Error("Missing fire config: appId");
 
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
-const db = getFirestore();
+const db = getFirestore(app);
 
 export default db;

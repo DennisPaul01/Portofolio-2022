@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import ReactGA from "react-ga4";
-import { Box, Image, Text, Flex, Button, Link } from "@chakra-ui/react";
+import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
 
 import apiflower1 from "../../../assets/artorian/artorian-1.png";
 
@@ -143,20 +143,8 @@ const RoFlowerApiProject = () => {
               </Text>
             </Flex>
             <Flex display={["flex"]} mt={["20px"]} alignItems={["center"]}>
-              <Text fontFamily={["heading"]} as="p">
-                <Link
-                  border={["1px solid #5FA0E4"]}
-                  px={["50px"]}
-                  py={["10px"]}
-                  fontSize={["p"]}
-                  color={["white"]}
-                  _hover={{ backgroundColor: "#5FA0E4", color: "5FA0E4" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="http://roflowerapi.space/"
-                >
-                  Check website
-                </Link>
+              <Text fontFamily={["heading"]} as="p" color="#5FA0E4">
+                Legacy project
               </Text>
               <Button
                 onClick={artStoreHandler}

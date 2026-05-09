@@ -1,22 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import "./index.css";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 import { customTheme } from "./customeTheme";
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <ChakraProvider resetCSS theme={customTheme}>
         <App />
       </ChakraProvider>
     </BrowserRouter>
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
 
 // Import Order:
@@ -38,8 +36,3 @@ ReactDOM.render(
 // - Create const/var/let specific to Component
 // - Call functions — If there
 // (Separate each section by one empty line)
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

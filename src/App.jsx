@@ -7,10 +7,11 @@ import NavBar from "./components/NavBar/NavBar";
 
 const HomePage = React.lazy(() => import("./Pages/HomePage"));
 const AboutPage = React.lazy(() => import("./Pages/AboutPage"));
+const SiteDetailPage = React.lazy(() => import("./Pages/SiteDetailPage"));
 
 function App() {
-  ReactGA.initialize("UA-136464204-2");
   useEffect(() => {
+    ReactGA.initialize("UA-136464204-2");
     ReactGA.send({ hitType: "pageview", page: "home" });
   }, []);
 
@@ -27,6 +28,9 @@ function App() {
             </Route>
             <Route path="/about" exact>
               <AboutPage></AboutPage>
+            </Route>
+            <Route path="/sites/:siteSlug" exact>
+              <SiteDetailPage></SiteDetailPage>
             </Route>
             <Route path="*">
               <Redirect to="/"></Redirect>

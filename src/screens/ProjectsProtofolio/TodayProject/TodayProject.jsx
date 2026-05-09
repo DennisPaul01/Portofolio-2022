@@ -5,7 +5,6 @@ import {
   Flex,
   Button,
   Divider,
-  Link,
 } from "@chakra-ui/react";
 import BannerTodaywebp from "../../../assets/today/image-banner-today.webp";
 import BannerToday from "../../../assets/today/image-banner-today.png";
@@ -30,14 +29,9 @@ const TodayProject = () => {
   const showModalHandler = () => {
     setShowModal(!showModal);
   };
-  const redirectWebsite = () => {
-    const url = "http://do-today.work/";
-    window.open(url, "_blank");
-  };
   return (
     <Box position={["relative"]}>
       <Box
-        onClick={redirectWebsite}
         onMouseEnter={showModalHandler}
         maxW={["100%"]}
         maxHeight={["auto"]}
@@ -127,20 +121,8 @@ const TodayProject = () => {
               </Text>
             </Flex>
             <Flex display={["flex"]} mt={["20px"]} alignItems={["center"]}>
-              <Text fontFamily={["heading"]} as="p">
-                <Link
-                  border={["1px solid yellow"]}
-                  px={["50px"]}
-                  py={["10px"]}
-                  fontSize={["p"]}
-                  color={["yellow"]}
-                  _hover={{ backgroundColor: "yellow", color: "white" }}
-                  target="_blank"
-                  rel="noreferrer"
-                  href="http://do-today.work/"
-                >
-                  Check website
-                </Link>
+              <Text fontFamily={["heading"]} as="p" color="yellow">
+                Legacy project
               </Text>
               <Button
                 onClick={todoHandler}

@@ -3,6 +3,7 @@ import { Text, Container, Grid, GridItem, Box } from "@chakra-ui/react";
 import ArtorianProject from "../ProjectsProtofolio/ArtorianProject/ArtorianProject";
 import RoFlowerApiProject from "../../screens/ProjectsProtofolio/RoFlowerApiProject/RoFlowerAPIProject";
 import TodayProject from "../ProjectsProtofolio/TodayProject/TodayProject";
+import AgentSitesSection from "./AgentSitesSection";
 
 const WebDevSection = () => {
   return (
@@ -21,6 +22,18 @@ const WebDevSection = () => {
         fontSize={["h4", "h3", "h2"]}
       >
         Web development work
+      </Text>
+
+      <AgentSitesSection></AgentSitesSection>
+
+      <Text
+        as="h3"
+        fontFamily="heading"
+        fontWeight="bold"
+        fontSize={["3rem", "4rem", "5rem"]}
+        mb="24px"
+      >
+        Legacy projects
       </Text>
 
       <Grid
