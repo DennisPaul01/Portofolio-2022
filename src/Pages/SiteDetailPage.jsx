@@ -33,6 +33,7 @@ import { getAgentSiteBySlug } from "../data/sites";
 const MotionBox = motion.create(Box);
 
 const revealViewport = { once: true, amount: 0.22 };
+const pagePaddingX = ["20px", "30px", "40px", "48px"];
 
 const RevealBox = ({ children, delay = 0, y = 34, ...rest }) => (
   <MotionBox
@@ -968,7 +969,7 @@ const GolRacuCaseStudy = ({ site }) => {
   }, []);
 
   return (
-    <Container ref={pageRef} maxW="1560px" pt={["78px", "96px"]} pb="120px">
+    <Container ref={pageRef} maxW="1560px" pt={["78px", "96px"]} pb="120px" px={pagePaddingX}>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
       <Link
@@ -1441,7 +1442,7 @@ const DddManagerCaseStudy = ({ site }) => {
   }, []);
 
   return (
-    <Container maxW="1560px" pt={["78px", "96px"]} pb="120px">
+    <Container maxW="1560px" pt={["78px", "96px"]} pb="120px" px={pagePaddingX}>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
       <Link as={RouterLink} to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#202020" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
@@ -1687,7 +1688,7 @@ const InFridgeCaseStudy = ({ site }) => {
   }, []);
 
   return (
-    <Container maxW="1560px" pt={["78px", "96px"]} pb="120px">
+    <Container maxW="1560px" pt={["78px", "96px"]} pb="120px" px={pagePaddingX}>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
       <Link as={RouterLink} to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#202020" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
@@ -1936,7 +1937,7 @@ const ReziGrileCaseStudy = ({ site }) => {
   }, []);
 
   return (
-    <Container maxW="1560px" pt={["78px", "96px"]} pb="120px">
+    <Container maxW="1560px" pt={["78px", "96px"]} pb="120px" px={pagePaddingX}>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
       <Link as={RouterLink} to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#101b2a" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
@@ -2209,7 +2210,7 @@ const SiteDetailPage = () => {
   }
 
   return (
-    <Container maxW="1500px" pt={["120px", "150px"]} pb="120px">
+    <Container maxW="1500px" pt={["120px", "150px"]} pb="120px" px={pagePaddingX}>
       <Link
         as={RouterLink}
         to="/#work"
