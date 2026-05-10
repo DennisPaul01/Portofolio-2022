@@ -15,7 +15,7 @@ const IntroSection = () => {
     <Container
       maxW={["1600px"]}
       mb={["100px", "200px", "350px"]}
-      px={["30px", "30px", "30px", "30px", "0"]}
+      px={["20px", "30px", "40px", "48px"]}
       as="section"
       className="intro-section"
     >
@@ -23,18 +23,24 @@ const IntroSection = () => {
         display={["flex"]}
         mt={["20px", "70px", "150px"]}
         justifyContent="space-between"
+        gap={["30px", "48px"]}
       >
-        <Box w="800px">
-          <Text as="h2" fontFamily={["heading"]} fontSize={["h3", "h2"]}>
-            Hello, my name is Denis and I create websites for digital universe
-            using my skills of
+        <Box w={["100%", "100%", "800px"]} maxW="100%">
+          <Text
+            as="h2"
+            fontFamily={["heading"]}
+            fontSize={["h3", "h2"]}
+            className={classes.introTitle}
+          >
+            <span>Hello, my name is Denis</span>
+            <span>and I'm also</span>
           </Text>
-          <MovingText></MovingText>
+          <MovingText />
         </Box>
         <Box
           w="500px"
           className={classes.container}
-          display={["none", "none", "none", "block"]}
+          display={["none", "none", "none", "none", "none", "block"]}
         >
           <Image
             src={spaceship}

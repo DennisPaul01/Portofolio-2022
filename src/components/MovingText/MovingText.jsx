@@ -11,7 +11,7 @@ const MovingText = () => {
         fontSize={["h4", "h3", "h2"]}
         className={classes.text1}
       >
-        web dev
+        an AI full stack dev
       </Text>
       <Text
         as="h2"
@@ -20,7 +20,7 @@ const MovingText = () => {
         fontSize={["h4", "h3", "h2"]}
         className={classes.text2}
       >
-        web design
+        a UI/UX designer
       </Text>
       <Text
         as="h2"
@@ -29,7 +29,7 @@ const MovingText = () => {
         fontSize={["h4", "h3", "h2"]}
         className={classes.text3}
       >
-        star wars fan
+        a Star Wars fan
       </Text>
     </div>
   );

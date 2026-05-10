@@ -12,6 +12,7 @@ const WebDevSection = () => {
       height={["auto"]}
       mt={["50px", "100px", "200px"]}
       mb={["50px", "100px", "200px"]}
+      px={["20px", "30px", "40px", "48px"]}
       as="section"
       className="web-development"
     >

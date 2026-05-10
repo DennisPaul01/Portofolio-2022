@@ -2,6 +2,16 @@
   position: relative;
 }
 
+.introTitle {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.08;
+}
+
+.introTitle span {
+  display: block;
+}
+
 .spaceship {
   max-width: 100%;
   position: absolute;
