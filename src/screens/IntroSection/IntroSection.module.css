@@ -17,14 +17,14 @@
   position: absolute;
   top: 0px;
   margin-top: -70px;
-  left: 100px;
+  left: 70px;
 }
 .light {
-  max-width: 100%;
+  max-width: none;
   position: absolute;
   top: 50px;
   z-index: -1;
-  left: 80px;
+  left: 46px;
 
   animation: lightMove 3s infinite;
 }
@@ -32,9 +32,28 @@
   max-width: 100%;
   position: absolute;
   top: 280px;
-  left: 50px;
+  left: 28px;
   transform: rotate(180deg);
   animation: cowMove 3s infinite;
+}
+
+@media (max-width: 1439px) {
+  .spaceship {
+    width: 322px;
+    left: 50px;
+  }
+
+  .light {
+    width: 330px;
+    top: 42px;
+    left: 44px;
+  }
+
+  .cow {
+    width: 240px;
+    top: 240px;
+    left: 86px;
+  }
 }
 
 @keyframes lightMove {

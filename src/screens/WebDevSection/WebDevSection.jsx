@@ -21,6 +21,7 @@ const WebDevSection = () => {
         fontFamily="heading"
         fontWeight="bold"
         fontSize={["h4", "h3", "h2"]}
+        mb={["34px", "46px", "64px"]}
       >
         Web development work
       </Text>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { Link as RouterLink, Redirect, useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Box, Container, Flex, Grid, Image, Link, Text } from "@chakra-ui/react";
 import {
   ArrowLeft,
@@ -973,7 +974,8 @@ const GolRacuCaseStudy = ({ site }) => {
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
       <Link
-        as={RouterLink}
+        as={HashLink}
+        smooth
         to="/#work"
         display="inline-flex"
         alignItems="center"
@@ -1445,7 +1447,7 @@ const DddManagerCaseStudy = ({ site }) => {
     <Container maxW="1560px" pt={["78px", "96px"]} pb="120px" px={pagePaddingX}>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
-      <Link as={RouterLink} to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#202020" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
+      <Link as={HashLink} smooth to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#202020" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
         <ArrowLeft size={18} />
         Back to work
       </Link>
@@ -1691,7 +1693,7 @@ const InFridgeCaseStudy = ({ site }) => {
     <Container maxW="1560px" pt={["78px", "96px"]} pb="120px" px={pagePaddingX}>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
-      <Link as={RouterLink} to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#202020" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
+      <Link as={HashLink} smooth to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#202020" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
         <ArrowLeft size={18} />
         Back to work
       </Link>
@@ -1940,7 +1942,7 @@ const ReziGrileCaseStudy = ({ site }) => {
     <Container maxW="1560px" pt={["78px", "96px"]} pb="120px" px={pagePaddingX}>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
 
-      <Link as={RouterLink} to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#101b2a" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
+      <Link as={HashLink} smooth to="/#work" display="inline-flex" alignItems="center" gap="8px" fontFamily="body" fontSize="1.5rem" color="#101b2a" mb="18px" _hover={{ color: site.accent, textDecoration: "none" }}>
         <ArrowLeft size={18} />
         Back to work
       </Link>
@@ -2145,21 +2147,21 @@ const ReziGrileCaseStudy = ({ site }) => {
         ))}
       </Grid>
 
-      <Box mt="92px" bg="#f7fbfa" border="1px solid rgba(40,127,112,0.16)" borderRadius="8px" p={["26px", "38px"]} position="relative" overflow="hidden">
+      <Box id="brand-system" mt="92px" bg="#f7fbfa" border="1px solid rgba(40,127,112,0.16)" borderRadius="8px" p={["24px", "34px", "38px"]} position="relative" overflow="hidden">
         <Box position="absolute" inset="0" opacity="0.5" bg="linear-gradient(90deg, rgba(40,127,112,0.08) 0 1px, transparent 1px), linear-gradient(0deg, rgba(67,205,190,0.08) 0 1px, transparent 1px)" backgroundSize="58px 58px" />
-        <Grid templateColumns={["1fr", "1fr", "0.7fr 1.3fr"]} gap="28px" alignItems="center" position="relative" zIndex="1">
-          <Box>
+        <Grid templateColumns={["1fr", "1fr", "minmax(0, 0.95fr) minmax(430px, 0.85fr)"]} gap={["28px", "32px", "46px"]} alignItems="center" position="relative" zIndex="1">
+          <Box maxW={["100%", "620px", "560px"]}>
             <Text as="p" fontFamily="body" fontSize="1.2rem" color={site.accent} fontWeight="800" textTransform="uppercase" mb="10px">Brand system</Text>
-            <Text as="h2" fontFamily="heading" fontSize={["4rem", "5.5rem"]} lineHeight="0.96" color="#101b2a" mb="18px">Characters make dense exam prep feel lighter.</Text>
-            <Text as="p" fontFamily="body" fontSize="1.75rem" color="#52627a" mb="22px">
+            <Text as="h2" fontFamily="heading" fontSize={["3.7rem", "4.9rem", "5.35rem"]} lineHeight="0.96" color="#101b2a" mb="18px">Characters make dense exam prep feel lighter.</Text>
+            <Text as="p" fontFamily="body" fontSize={["1.55rem", "1.7rem"]} lineHeight="1.55" color="#52627a" mb="24px">
               The interface keeps information dense and scannable, while the character set gives achievements, help, fatigue and competition a recognizable product voice.
             </Text>
             <DetailList accent={site.accent} items={site.notes} />
           </Box>
-          <Grid templateColumns={["1fr 1fr", "repeat(4, 1fr)"]} gap="14px" alignItems="end">
+          <Grid templateColumns="repeat(2, minmax(0, 1fr))" gap={["12px", "14px", "16px"]} alignItems="stretch" maxW={["100%", "560px"]} ml={["0", "0", "auto"]}>
             {characters.map((src, index) => (
-              <Box key={src} bg="#fff" border="1px solid rgba(40,127,112,0.14)" borderRadius="8px" p="10px" minH={["170px", "220px"]} display="flex" alignItems="flex-end" justifyContent="center" boxShadow="0 18px 50px rgba(17,24,39,0.08)">
-                <Image src={src} alt={`ReziGrile character ${index + 1}`} maxH={["150px", "210px"]} objectFit="contain" />
+              <Box key={src} bg="#fff" border="1px solid rgba(40,127,112,0.14)" borderRadius="8px" p={["12px", "14px"]} minH={index === 0 ? ["150px", "190px", "210px"] : ["150px", "190px", "210px"]} display="flex" alignItems="center" justifyContent="center" boxShadow="0 18px 46px rgba(17,24,39,0.08)">
+                <Image src={src} alt={`ReziGrile character ${index + 1}`} maxH={index === 0 ? ["128px", "166px", "178px"] : ["132px", "172px", "186px"]} objectFit="contain" />
               </Box>
             ))}
           </Grid>
@@ -2212,7 +2214,8 @@ const SiteDetailPage = () => {
   return (
     <Container maxW="1500px" pt={["120px", "150px"]} pb="120px" px={pagePaddingX}>
       <Link
-        as={RouterLink}
+        as={HashLink}
+        smooth
         to="/#work"
         display="inline-flex"
         alignItems="center"

@@ -301,14 +301,13 @@ const AgentSitesSection = () => {
 
   return (
     <Box mb={["60px", "90px", "120px"]}>
-      <Flex
-        alignItems={["flex-start", "flex-end"]}
-        justifyContent="space-between"
-        flexDirection={["column", "row"]}
-        gap="24px"
+      <Grid
+        templateColumns={["1fr", "1fr", "minmax(0, 1fr) 420px"]}
+        gap={["18px", "24px", "36px"]}
+        alignItems="end"
         mb="30px"
       >
-        <Box maxW="830px">
+        <Box maxW="900px">
           <Flex alignItems="center" gap="10px" mb="10px">
             <Sparkles size={22} color="#3772FF" />
             <Text
@@ -320,31 +319,40 @@ const AgentSitesSection = () => {
               textTransform="uppercase"
               letterSpacing="0"
             >
-              New AI and agents work
+              Web, mobile and AI work
             </Text>
           </Flex>
           <Text
             as="h3"
             fontFamily="heading"
-            fontSize={["3.4rem", "4.8rem", "6rem"]}
+            fontSize={["3.4rem", "4.6rem", "5.4rem"]}
             fontWeight="black"
             lineHeight="1"
             color="#202020"
+            maxW="900px"
           >
-            Sites we are building now
+            Product case studies
           </Text>
         </Box>
-        <Text
-          as="p"
-          fontFamily="body"
-          fontSize={["1.6rem", "1.7rem"]}
-          maxW="480px"
-          color="#3a3a3a"
+        <Box
+          bg="#fff"
+          border="1px solid rgba(32, 32, 32, 0.1)"
+          borderRadius="8px"
+          px={["18px", "22px"]}
+          py={["16px", "18px"]}
+          boxShadow="0 18px 48px rgba(32, 32, 32, 0.06)"
         >
-          Fresh case studies for the new work. Each site has its own page for
-          architecture, agent roles, and how the system behaves in production.
-        </Text>
-      </Flex>
+          <Text
+            as="p"
+            fontFamily="body"
+            fontSize={["1.6rem", "1.75rem"]}
+            color="#3a3a3a"
+          >
+            A mix of web apps, mobile apps and AI-assisted platforms, with
+            case studies covering product thinking, architecture and real workflows.
+          </Text>
+        </Box>
+      </Grid>
 
       <Grid
         templateColumns={[

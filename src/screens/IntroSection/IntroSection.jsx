@@ -38,9 +38,10 @@ const IntroSection = () => {
           <MovingText />
         </Box>
         <Box
-          w="500px"
+          w={["0", "0", "0", "390px", "500px"]}
+          flexShrink="0"
           className={classes.container}
-          display={["none", "none", "none", "none", "none", "block"]}
+          display={["none", "none", "none", "block"]}
         >
           <Image
             src={spaceship}
